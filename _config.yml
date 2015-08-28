@@ -1,3 +1,5 @@
+baseurl: /blog
+
 collections:
   authors:
     output: true

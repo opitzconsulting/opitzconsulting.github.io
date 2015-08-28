@@ -8,6 +8,6 @@ permalink: /posts/index.html
 <ul>
 {% assign posts = site.posts %}
 {% for post in posts %}
-	<li><a href="{{post.url}}">{{post.title}}</a>{% include date.html date=post.date %}</li>
+	<li><a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a>{% include date.html date=post.date %}</li>
 {% endfor %}
 </ul>

@@ -9,4 +9,4 @@ layout: default
 
 {% assign author = site.authors | where: "username", page.author | first %}
 
-Autor: <a href="{{ author.url }}">{{ author.name }}</a>
+Autor: <a href="{{ site.baseurl }}{{ author.url }}">{{ author.name }}</a>

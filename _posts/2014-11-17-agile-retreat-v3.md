@@ -5,7 +5,7 @@ author: stefan.glase
 
 Am 19.09.2014 trafen sich eine gut gemischte Truppe von knapp 20 Personen (darunter auch erstmals Mitarbeiter unserer Kunden!) zum **3. Agile Retreat** von OPITZ CONSULTING im beschaulichen Ebersberg in der Nähe von München. Vom Gesellschafter über Studenten bis hin zu einer Vertreterin aus dem Bereich HR, ihnen allen war eines gemeinsam: Das Interesse an agiler Softwareentwicklung.
 
-![](/assets/img/2014-11-17/001.jpg)
+![]({{ site.baseurl }}/assets/img/2014-11-17/001.jpg)
 
 Nachdem gegen 18 Uhr der Großteil der Teilnehmer seinen Weg durch das verschlafene Oberbayern gefunden hatte und im idyllischen Landgasthaus eingetroffen war, trafen wir uns zu einem ersten Kennenlernen in lockerer Atmosphäre.
 
@@ -29,7 +29,7 @@ Unter anderem wurden folgende Themen beleuchtet und lebhaft diskutiert:
 
 Mit einer vollen Agenda und drei parallelen 30min-Slots für die jeweiligen Themen konnte sich jeder der Gruppe anschließen, die sein Interesse am Meisten weckte oder eben von Board zu Board schlendern und sehen, wo man hängen blieb.
 
-![](/assets/img/2014-11-17/002.jpg)
+![]({{ site.baseurl }}/assets/img/2014-11-17/002.jpg)
 
 So entfachte sich beispielsweise an einem Board eine spannende Diskussion darüber, wie es besser gelingen kann Entscheider auf Managementebene vom Vorteil agiler SW zu überzeugen und wie viel Controlling in einer agilen Welt möglich und vielleicht auch notwendig ist.
 
@@ -41,12 +41,12 @@ Stefan berichtete über seine eigenen Erfahrungen wie Scrum auch im Großen funk
 
 Nach dem Mittagessen mit guter bayerischer Kost half gegen das Suppen-Koma nur noch spielen. Während sich eine Gruppe angeleitet durch Christian via Kanban-Brettspiel (http://getkanban.com/) dem vorher in einer weiteren Session von Harald kurz vorgestellten Thema Kanban spielerisch weiter näherte, erhielt die zweite Gruppe mit Hilfe von jeder Menge Legosteinen eine tolle Methodik zum Einsatz in Retrospektiven vorgestellt.
 
-![](/assets/img/2014-11-17/003.jpg)
+![]({{ site.baseurl }}/assets/img/2014-11-17/003.jpg)
 
 Zum Abschluss des Open Spaces und des gesamten Agile Retreats stand die Zusammenfassung der einzelnen Themen und Erkenntnisse. So durchlebten wir kurzweilig noch einmal die einzelnen Stationen des Tages, vor allem die, an denen wir nicht teilnehmen konnten. Oft mussten wir uns auf die Zunge beißen das ein oder andere Thema nicht direkt wieder aufzunehmen.
 
 Nach einem ereignisreichen (halben) Wochenende ging es nun wieder nach Hause. Viele Themen wurden angesprochen und diskutiert. Viele Anregungen mit auf den Weg gegeben. Aber vor allem haben sich hier in Oberndorf motivierte und engagierte Leute zusammengefunden, die mit Feuereifer dabei sind, nach immer besseren Lösungen zu suchen und diese Erfahrung bereitwillig mit anderen teilen möchten.
 
-![](/assets/img/2014-11-17/004.jpg)
+![]({{ site.baseurl }}/assets/img/2014-11-17/004.jpg)
 
 Auch für 2015 sind wir uns sicher, wieder einen Agile Retreat durchführen zu wollen. Denn wie wir gelernt haben: **Auch in der 16. Retrospektive gibt es noch neue Erkenntnisse.**
