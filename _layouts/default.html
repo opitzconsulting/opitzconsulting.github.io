@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{% if page.title %}{{ page.title }} &middot; {% endif %}blog | opitzconsulting</title>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">blog | opitzconsulting</a></h1>
+        <p>Hier bloggen Mitarbeiter von OPITZ CONSULTING zu den unterschiedlichsten Themen ihrer täglichen Arbeit. Lernen Sie unsere <a href="/authors">Mitarbeiter und Autoren</a> kennen.</p>
+      </header>
+      <section>
+		{{content}}
+	  </section>
+      <footer>
+        <p>&copy; <a href="http://www.opitz-consulting.com">OPITZ CONSULTING Deutschland GmbH</a></p>
+	  </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<h3><a href="/authors">Autoren</a> | {{ page.name }}</h3>
+
+{{content}}
+
+ <dl>
+ {% if page.email %}
+  <dt>E-Mail</dt>
+  <dd><a href="mailto:{{ page.email }}">{{ page.email }}</a></dd>
+{% endif %}
+{% if page.website %}
+  <dt>Webseite</dt>
+  <dd><a href="{{ page.website }}">{{ page.website }}</a></dd>
+{% endif %}
+{% if page.social.twitter %}
+  <dt>Twitter</dt>
+  <dd><a href="https://twitter.com/{{ page.social.twitter }}">@{{ page.social.twitter }}</a></dd>
+{% endif %}
+{% if page.social.github %}
+  <dt>Github</dt>
+  <dd><a href="https://github.com/{{ page.social.github }}">{{ page.social.github }}</a></dd>
+{% endif %}
+</dl> 
+
+<h3>Blogbeiträge</h3>
+
+{% assign posts = site.posts | where: "author", page.username %}
+<ul>
+{% for post in posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a> {% include date.html date=post.date %}</li>
+{% endfor %}
+</ul>
