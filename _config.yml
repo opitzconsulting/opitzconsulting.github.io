@@ -1,4 +1,5 @@
 baseurl: /blog
+permalink: pretty
 
 collections:
   authors:
