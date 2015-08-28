@@ -3,7 +3,7 @@ layout: default
 permalink: /posts/index.html
 ---
 
-<h3>Blogbeiträge</h3>
+## Blogbeiträge
 
 <ul>
 {% assign posts = site.posts %}

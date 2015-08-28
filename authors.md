@@ -3,7 +3,7 @@ layout: default
 permalink: /authors/index.html
 ---
 
-<h3>Autoren</h3>
+## Autoren
 
 Auf dieser Seite möchten wir Ihnen unsere in diesem Blog aktiven Mitarbeiter und Autoren vorstellen:
 
