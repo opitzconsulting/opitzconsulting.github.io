@@ -11,5 +11,5 @@ TODO
 * tags
 * imprint
 * footer
-* social media links
+* share with social media links
 * page titles
