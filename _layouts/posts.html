@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+<small>{% include date.html date=page.date %}</small>
+
+{{content}}
+
+{% assign author = site.authors | where: "username", page.author | first %}
+
+Autor: <a href="{{ site.baseurl }}{{ author.url }}">{{ author.name }}</a>
