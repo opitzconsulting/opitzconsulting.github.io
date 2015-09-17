@@ -1,26 +1,27 @@
 - name: YouTube
   url: https://www.youtube.com/user/OPITZCONSULTING
-  class: icon-youtube
+#  class: icon-youtube
+  class: fa fa-youtube-square fa-4x
   title: "Videos von OC auf YouTube"
 
 - name: Twitter
   url: https://www.twitter.com/oc_wire
-  class: icon-twitter
+  class: fa fa-twitter-square fa-4x
   title: "Immer das Neuste von OC gibt es auf Twitter"
 
 - name: GitHub
   url: https://github.com/opitzconsulting/
-  class: icon-github
+  class: fa fa-github-square fa-4x
   title: Code und mehr...
 
 - name: Slideshare
   url: http://de.slideshare.net/opitzconsulting/
-  class: icon-slideshare
+  class: fa fa-slideshare fa-4x
   title: Präsentationen
 
 - name: Xing
   url: https://www.xing.com/companies/opitzconsultinggmbh
-  class: icon-xing
+  class: fa fa-xing-square fa-4x
   title: Xing Profil
 #- name: Soundcloud
 #  url: http://soundcloud.com/phlow

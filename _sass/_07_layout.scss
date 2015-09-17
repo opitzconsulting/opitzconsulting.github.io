@@ -311,13 +311,14 @@ body.video cite { color: #fff; }
     }
 
     #subfooter .social-icons li a {
-        font-size: rem-calc(23);
+        font-size: rem-calc(36);
         display: block;
-        width: 36px;
+        width: 52px;
         border-radius: 50%;
         color: $subfooter-bg;
         background: $subfooter-color;
         text-align: center;
+        vertical-align: middle;
     }
     #subfooter .social-icons li a:hover {
         background: $subfooter-bg;

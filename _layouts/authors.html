@@ -1,37 +1,30 @@
 ---
 layout: page
-header:
-  title: "Autoren"
-title: "Autor"
 ---
-    <h2><a href="/authors">Autoren</a> | {{ page.name }}</h2>
+    <h2><a href="/authors">Autor</a> | {{ page.name }}</h2>
 
     {{content}}
-
-     <dl>
-     {% if page.email %}
-      <dt>E-Mail</dt>
-      <dd><a href="mailto:{{ page.email }}">{{ page.email }}</a></dd>
-    {% endif %}
-    {% if page.website %}
-      <dt>Webseite</dt>
-      <dd><a href="{{ page.website }}">{{ page.website }}</a></dd>
-    {% endif %}
-    {% if page.social.twitter %}
-      <dt>Twitter</dt>
-      <dd><a href="https://twitter.com/{{ page.social.twitter }}">@{{ page.social.twitter }}</a></dd>
-    {% endif %}
-    {% if page.social.github %}
-      <dt>Github</dt>
-      <dd><a href="https://github.com/{{ page.social.github }}">{{ page.social.github }}</a></dd>
-    {% endif %}
-    </dl> 
+ 
+    <p class="contact-icons">
+      {% if page.email %}
+      <a href="mailto:{{ page.email }}"><i class="fa fa-envelope-square fa-2x"></i></a>
+      {% endif %}
+      {% if page.website %}
+      <a href="{{ page.website }}"><i class="fa fa-rss-square fa-2x"></i></a>
+      {% endif %}
+      {% if page.social.twitter %}
+      <a href="https://twitter.com/{{ page.social.twitter }}"><i class="fa fa-twitter-square fa-2x"></i></a>
+      {% endif %}
+      {% if page.social.github %}
+      <a href="https://github.com/{{ page.social.github }}"><i class="fa fa-github fa-2x"></i></a>
+      {% endif %}
+    </p>
 
     <h3>Blogbeiträge</h3>
 
     {% assign posts = site.posts | where: "author", page.username %}
-    <ul>
-    {% for post in posts %}
-      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> {% include date.html date=post.date %}</li>
-    {% endfor %}
-    </ul>
+      <ul>
+      {% for post in posts %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> {% include date.html date=post.date %}</li>
+      {% endfor %}
+      </ul>
