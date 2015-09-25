@@ -223,8 +223,7 @@ verschiedenen Umgebungen häufig nur selten gemacht und daher häufig
 manuell durchgeführt. Typischerweise gibt es in vielen Firmen noch den
 Iterativen Wasserfall.
 
-![]({{ site.baseurl
-}}/assets/img/devops_und_itil/Iterativer_Wasserfall.png)
+![]({{ site.baseurl }}/assets/img/devops_und_itil/Iterativer_Wasserfall.png)
 
 Aber getreu dem Motto: "Wenn etwas weht tut, mache es öfter", wird auch
 das Deployment auf die verschiedenen Umgebungen bei jeder Codeänderung
@@ -236,8 +235,7 @@ höher, dass dies auch funktioniert. Generell versucht man hin zu einem
 kontinuierlichen Fluss von wertschöpfenden Features in die Produktion zu
 kommen.
 
-![]({{ site.baseurl
-}}/assets/img/devops_und_itil/ContinuousDelivery_Prozesssicht.png)
+![]({{ site.baseurl }}/assets/img/devops_und_itil/ContinuousDelivery_Prozesssicht.png)
 
 Durch die kleinen Änderungen wird ein weiterer Effekt erzielt: Es gibt
 mehr Standard Changes. ITIL unterscheidet zwischen Standard und Normal
