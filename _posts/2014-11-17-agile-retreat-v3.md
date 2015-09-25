@@ -4,7 +4,7 @@ title: Agile Retreat v3
 teaser: "Am 19.09.2014 trafen sich eine gut gemischte Truppe von knapp 20 Personen (darunter auch erstmals Mitarbeiter unserer Kunden!) zum 3. Agile Retreat von OPITZ CONSULTING im beschaulichen Ebersberg in der Nähe von München. Vom Gesellschafter über Studenten bis hin zu einer Vertreterin aus dem Bereich HR, ihnen allen war eines gemeinsam: Das Interesse an agiler Softwareentwicklung."
 author: stefan.glase
 categories: 
-- agilitaet
+- agilität
 ---
 
 ![]({{ site.baseurl }}/assets/img/2014-11-17/001.jpg)

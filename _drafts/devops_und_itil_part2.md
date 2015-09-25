@@ -7,7 +7,7 @@ teaser: "DevOps und ITIL scheinen auf einen ersten oberflächlichen Blick unters
 Organisationseinheiten in Verbindung gebracht. In dieser Blogserie zeigen wir, wie beide zusammen funktionieren können"
 categories:
 - automatisierung
-- agilitaet
+- agilität
 ---
 
 ## ITIL Prozesse im Detail

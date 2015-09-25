@@ -1,4 +1,5 @@
 <aside>
+        {% include google_search %}
 	<div class="panel radius">
 		<h3>Sidebar</h3>
 		<p>

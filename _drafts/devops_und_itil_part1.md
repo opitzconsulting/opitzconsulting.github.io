@@ -7,7 +7,7 @@ Organisationseinheiten in Verbindung gebracht. In dieser Blogserie zeigen wir, w
 author: richard.attermeyer
 categories:
 - automatisierung
-- agilitaet
+- agilität
 ---
 
 DevOps und ITIL scheinen auf einen ersten oberflächlichen Blick unterschiedliche Ziele zu verfolgen. Die Wahrnehmung von ITIL ist, dass es eine Methode ist, die häufig in größeren Organisationen zum Einsatz kommt in denen Entwicklung und Betrieb stark voneinander getrennt arbeiten und dies auch so gewollt ist. DevOps aber wird häufig mit dem Einreißen der Mauern zwischen diesen
