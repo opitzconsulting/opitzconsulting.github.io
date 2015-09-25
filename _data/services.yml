@@ -1,5 +1,9 @@
 - menu_name: "Services"
 
+- name: "Impressum"
+  url: "/impressum/"
+  title: "Impressum"
+
 - name: "Kontakt"
   url: "/kontakt/"
   title: "Kontakt"

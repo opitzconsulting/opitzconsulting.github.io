@@ -39,8 +39,8 @@
 
         <!-- Twitter cards metadatas -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@vdaubry">
-        <meta name="twitter:creator" content="@vdaubry">
+        <meta name="twitter:site" content="@oc_wire">
+        <meta name="twitter:creator" content="@oc_wire">
         {% if page.title %}
           <meta name="twitter:title" content="{{ page.title }}">
         {% else %}
