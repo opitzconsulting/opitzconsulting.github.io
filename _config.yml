@@ -24,8 +24,8 @@ author: crew
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
-url: 'http://opitzconsulting.github.io/blog/'
-baseurl: ''
+url: 'http://localhost:4000'
+baseurl: '/blog'
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages
@@ -37,7 +37,7 @@ baseurl: ''
 # Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
-urlimg: 'http://opitzconsulting.github.io/blog/images/'
+urlimg: 'http://localhost:4000/blog/images/'
 
 
 # Logo size is 600x80 pixels

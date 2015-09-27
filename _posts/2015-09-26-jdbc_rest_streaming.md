@@ -1,4 +1,12 @@
-
+---
+header: no
+title: JDBC Rest Streaming
+author: torsten.mandry
+teaser: "JDBC, Rest und Streaming von großen Datenmengen"
+categories: 
+- java
+- entwicklung
+---
 
 Ich sitze zur Abwechselung mal wieder an einem recht interessanten Design-Problem zu dem ich gerne eure Meinungen und Ratschläge abfragen würde. 
 Ich versuche mal die Problemstellung, Lösungsidee und meine Herausforderungen möglichst knapp zu beschreiben:
@@ -16,7 +24,9 @@ Damit ich die Response schon starten kann während die JDBC Verarbeitung noch l�
 Zum starten und verwalten der nebenläufigen Prozesse nutze ich den java.util.concurrent.ExecutorService (als Spring Bean).
 Die StreamingOutput Implementierung liest die Ergebnis Objekte aus der Queue und schreibt sie als JSON String in die Response. Durch die Verwendung der BlockingQueue wird dabei ggf. gewartet bis der Query Processor die nächsten Datensätze bereitstellt. Ein spezielles End-Element (Poison-Element) kennzeichnet das Ende des Ergebnisses.
 
+# Lösung
 Im Großen und Ganzen ist unsere Lösung so geblieben wie zuvor geschildert:
+
 1. Die REST QueryResource nimmt den Request entgegen, prüft die Parameter und ruft einen QueryService zum Ausführen der Query auf
 2. Der QueryService erzeugt über eine QueryWorkerFactory eine neue QueryWorker (Runnable) Instanz zur Ausführung der Query.
 3. Die QueryWorkerFactory initialisiert den QueryWorker mit den notwendigen Resourcen zur Ausführung der Datenbank Anfrage (i.W. DataSource und TransactionManager) sowie das auszuführende Query Objekt. 
@@ -24,10 +34,10 @@ Im Großen und Ganzen ist unsere Lösung so geblieben wie zuvor geschildert:
 5. Der QueryService übergibt die QueryWorker Instanz an einen Spring SimpleAsyncTaskExecutor zur ansynchronen Ausführung und liefert die BlockingQueue aus dem QueryWorker an die aufrufende QueryResource zurück.
 6. Die QueryResource nimmt die BlockingQueue des Services entgegen und wartet bis darin das erste Result Element verfügbar ist.
 7. Der asynchron ausgeführte QueryWorker führt die Query unter Verwendung eines Spring JDBC Templates aus. 
-7a. In der DB wird VPD eingesetzt um die Row-Level-Security sicherzustellen. Aus diesem Grund muss vor Ausführung der DB Anfrage (innerhalb einer Transaktion) ein Security Context gesetzt (und am Ende wieder zurückgesetzt) werden. 
-7b. Da der QueryWorker in einem separaten Thread läuft kann keine Transactional Annotation verwendet werden. Stattdessen wird über ein Spring TransactionTemplate die Ausführung innerhalb einer Transaktion sichergestellt.
-7c. Ein RowCallbackHandler wandelt die ResultSet Zeilen in Ergebnis Datensätze um und schreibt diese in die BlockingQueue.
+    1. In der DB wird VPD eingesetzt um die Row-Level-Security sicherzustellen. Aus diesem Grund muss vor Ausführung der DB Anfrage (innerhalb einer Transaktion) ein Security Context gesetzt (und am Ende wieder zurückgesetzt) werden. 
+    2. Da der QueryWorker in einem separaten Thread läuft kann keine Transactional Annotation verwendet werden. Stattdessen wird über ein Spring TransactionTemplate die Ausführung innerhalb einer Transaktion sichergestellt.
+    3. Ein RowCallbackHandler wandelt die ResultSet Zeilen in Ergebnis Datensätze um und schreibt diese in die BlockingQueue.
 8. Die QueryResource am anderen Ende der BlockingQueue empfängt den ersten Ergebnis Datensatz (mit einem peek(), Element bleibt in der Queue) und prüft diesen.
-8a. Wenn es sich um das End Element handelt hat die Query keine Ergebnisse ergeben. Die QueryResource gibt in diesem Fall eine 404 Not Found Response zurück.
-8b. Im anderen Fall (echtes Ergebnis Element) hat die Query Ergebnisse ergeben und die QueryResource gibt eine StreamingOutput Implementierung auf Basis der BlockingQueue zurück.
+    1. Wenn es sich um das End Element handelt hat die Query keine Ergebnisse ergeben. Die QueryResource gibt in diesem Fall eine 404 Not Found Response zurück.
+    2. Im anderen Fall (echtes Ergebnis Element) hat die Query Ergebnisse ergeben und die QueryResource gibt eine StreamingOutput Implementierung auf Basis der BlockingQueue zurück.
 9. Das StreamingOutput liest alle Elemente (bis zum End Element) aus der BlockingQueue und schreibt diese (als JSON String) in die Response.
