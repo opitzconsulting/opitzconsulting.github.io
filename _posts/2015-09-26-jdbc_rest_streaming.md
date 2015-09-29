@@ -2,7 +2,6 @@
 header: no
 title: JDBC Rest Streaming
 author: torsten.mandry
-teaser: "JDBC, Rest und Streaming von großen Datenmengen"
 categories: 
 - java
 - entwicklung
