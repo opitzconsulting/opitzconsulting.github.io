@@ -2,15 +2,14 @@
 layout: page
 header: no
 title: "OC goes JekyllBlog"
-teaser: "Wie kann man einen Jekyll basierten Blog nutzen?"
 author: Pascal Brokmeier und Frank Sanders
 categories:
 - Automatisierung
 - SocialBlogging
-- 
----
 
+---
 Während der MSA Days 2015 haben Stefan Glase und Richard Attermeyer eine Initiative vorgestellt, den Mitarbeitern mittels Github & Jekyll eine Möglichkeit zu bieten, Blogposts zu erstellen. Um allen einen einfachen Einstieg zu ermöglichen und direkt auch Content zu erhalten, sollte jeder Zuhörer einen eigenen Artikel verfassen und mittels Pull Request auf Github zum Blog hinzufügen. Dieser Artikel beschreibt, wie dieser Prozess verlaufen ist.
+<!--more-->
 
 ![]({{ site.baseurl }}/assets/img/2015-09-26-blog-kickoff/oc-goes-jekyll-1.jpg)
 

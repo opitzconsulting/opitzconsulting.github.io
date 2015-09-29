@@ -23,7 +23,7 @@ widget3:
   url: 'https://github.com/Phlow/feeling-responsive'
   image: software-modernisierung_75.jpg
   text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-permalink: /index.html
+#permalink: /index.html
 ---
 <div id="videoModal" class="reveal-modal large" data-reveal="">
   <div class="flex-video widescreen vimeo" style="display: block;">
