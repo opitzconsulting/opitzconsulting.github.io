@@ -24,7 +24,7 @@ author: crew
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
-url: 'http://localhost:4000'
+url: 'http://opitzconsulting.github.io'
 baseurl: '/blog'
 
 # This is for the editing function in _/includes/improve_content
