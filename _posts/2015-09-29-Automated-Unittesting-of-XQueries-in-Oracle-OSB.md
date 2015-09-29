@@ -1,4 +1,15 @@
-# Automated Unittesting of XQueries in Oracle OSB
+--- 
+layout: page
+header: no
+title: "Automated Unittesting of XQueries in Oracle OSB"
+author: Pascal Brokmeier
+categories:
+- Oracle
+- OSB
+- SOA
+- XQuery
+
+---
 
 In order to support a more agile project environment, OPITZ CONSULTING developed a Java/JUnit based SOA Unit Testing Framework. Among others, the framework was capable of using the Oracle libraries to run XQuery tests locally and verify their correctness. Over the course of time, Oracle released 12c and with it, changed its xquery files. A new extension (.xqy instead of .xq) was introduced and with it additional syntax. Oracle added a `(:: OracleAnnotationVersion "1.0" ::)` . After this, the testing framework needed to be updated to support such tags. Without an update, executing a query with the above annotation gave the following error: 
 
