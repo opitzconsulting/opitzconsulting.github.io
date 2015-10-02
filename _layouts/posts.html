@@ -7,6 +7,6 @@ layout: default
 
 {{content}}
 
-{% assign author = site.authors | where: "username", page.author | first %}
+{% assign author = site.authors | where: author.username, page.author | first %}
 
 Autor: <a href="{{ site.baseurl }}{{ author.url }}">{{ author.name }}</a>
