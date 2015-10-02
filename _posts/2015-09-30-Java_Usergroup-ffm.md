@@ -12,6 +12,8 @@ Mit 32 Teilnehmern war der Stammtisch dies mal erfreulich gut besucht. Schon wä
 Dadurch musste der Lifecoding-Teil am Schluss startk gekürzt werden, so das ich das Vorgenen oberflächlich ohne weitergehende Erklärungen darstellen konnte.
 
 Trotzdem bekam ich durchweg positive Rückmeldungen von den Teilnehmern.
+Viele wünschten eine Folgeveranstaltung, bei der dann das Lifecoding im Vordergrund stehen soll.
+Diese Folgeveranstaltung ist für Juni 2016 geplant.
 
 Ich denke, dass ich mit meinem Vortrag einige Teilnehmer von der Bedeutung von Unittests und der Testgetriebenen Entwicklung überzeugen konnte. 
 Trotzdem blieben einige Teilnehmer skeptisch.
