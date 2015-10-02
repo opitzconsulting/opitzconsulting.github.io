@@ -35,6 +35,7 @@ Caused by: weblogic.xml.query.exceptions.XQueryStaticException: line 3, column 1
 {% endhighlight %}
 
 Updating the Testing Framework, we were able to continue unit testing xqueries  using the following syntax:
+<!--more-->
 
 {% highlight java %}
 OXQDataSource dataSource = new OXQDataSource();
