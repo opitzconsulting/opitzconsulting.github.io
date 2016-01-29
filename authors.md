@@ -1,8 +1,7 @@
 ---
 layout: page
 permalink: /authors/index.html
-header:
-  - title: "Unsere Autoren"
+title: Autoren
 ---
 
 Auf dieser Seite möchten wir Ihnen unsere in diesem Blog aktiven Mitarbeiter und Autoren vorstellen:
