@@ -98,6 +98,6 @@ Daneben versuche ich Zeit für den [Chor](http://www.unichor.hhu.de/) zu finden,
 Beruflich arbeite ich als Senior Solution Architect bei der [OPITZ CONSULTING Deutschland GmbH](http://www.opitz-consulting.com/) und beschäftige mich dabei mit allen Dingen rund um die Softwareentwicklung. Meine Definition der Rolle eines Architekten geht über die Lehrbücher hinaus.
 Ein Architekt muss neben der reinen Softwarearchitektur auch den Entwicklungsprozess und den Auslieferungsprozess im Auge haben.
 Er sollte sich also auch mit agilen Prozessen, klassischem Projektmanagement und Themen im Umfeld von Continuous Delivery und DevOps auskennen.
-Aktuell interessieren mich besonders Continuous Delivery und das Microservices Architekturpatern.
+Aktuell interessieren mich besonders Continuous Delivery und das Microservices Architekturpattern.
 
 Viel Spaß beim Lesen und ich freue mich über die eine oder andere Rückmeldung.
