@@ -4,10 +4,9 @@ layout: default
 
 <div class="post mdl-grid">
     <!-- arrow back button -->
-    <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-
-        <a href="/index.html" class="demo-nav__button">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900"
+    <nav class="post-nav mdl-cell mdl-cell--12-col">
+        <a href="/index.html" class="demo-nav__button link-no-style">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--grey-900"
                     role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -23,18 +22,19 @@ layout: default
             <h1>{{ page.title }}</h1>
         </div>
 
-        <!--Metadata Bar-->
-        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-            <!--<div class="avatar {% if page.author contains 'Pascal' %} avatar-pascal {% endif %}"></div>-->
-            <div>
-                <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}
-                    {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-            </div>
-            <div class="mdl-layout-spacer"></div>
-        </div>
-
         <!--Content-->
-        <div class="mdl-color-text--grey-700 mdl-card__supporting-text" id="b">
+        <div class="mdl-card__supporting-text" id="b">
+
+            <div>
+                <!--<div class="avatar {% if post.author contains 'Pascal' %} avatar-pascal {% endif %}"></div>-->
+                <div>
+                    <span><strong>Author: </strong>{{page.author}}</span><br>
+                    <span><strong>Date: </strong>{{ page.date | date: "%b %-d, %Y" }}</span>
+                </div>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+            <hr>
+
             <div id="postContentWrapper">{{ content }}</div>
         </div>
 

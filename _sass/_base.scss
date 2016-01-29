@@ -7,7 +7,7 @@ body{
   text-decoration: none;
 
   &:hover {
-      color: $brand-color;
+      color: $grey-color-light; //TODO Stefan such dir mal eine gute Hover Color aus ;)
   }
 }
 
@@ -24,6 +24,7 @@ body{
 }
 
 .post-nav {
+    padding: 16px;
     display: flex;
     color: $grey-color;
 }
@@ -32,11 +33,11 @@ body{
     flex-grow: 1;
 }
 
-a.link-no-style{
+a{
     text-decoration: none;
-    color: $mdl-color-text--grey-700;
+    color: inherit;
 }
 
-.post>.mdl-card{
+.mdl-card{
     background: transparent;
 }

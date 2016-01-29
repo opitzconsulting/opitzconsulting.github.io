@@ -1,7 +1,7 @@
-<nav class="post-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+<nav class="post-nav mdl-cell mdl-cell--12-col">
     {% if page.next.url %}
     <a href="{{page.next.url}}" class="demo-nav__button link-no-style">
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900"
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--grey-900"
                 role="presentation">
             <i class="material-icons">arrow_back</i>
         </button>
@@ -15,14 +15,10 @@
     <a href="{{page.previous.url}}" class="demo-nav__button link-no-style">
         Older
 
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-            <i class="material-icons">arrow_forward</i>
-        </button>
-
-        <!--<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button&#45;&#45;icon mdl-color&#45;&#45;white mdl-color-text&#45;&#45;grey-900"
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color-text--grey-900"
                 role="presentation">
             <i class="material-icons">arrow_forward</i>
-        </button>-->
+        </button>
     </a>
     {% endif %}
 </nav>
