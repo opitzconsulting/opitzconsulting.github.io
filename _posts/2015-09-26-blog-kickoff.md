@@ -1,5 +1,4 @@
 --- 
-layout: page
 header: no
 title: "OC goes JekyllBlog"
 author: Pascal Brokmeier und Frank Sanders

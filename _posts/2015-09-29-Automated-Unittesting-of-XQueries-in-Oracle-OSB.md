@@ -1,5 +1,4 @@
 --- 
-layout: page
 header: no
 title: "Automated Unittesting of XQueries in Oracle OSB"
 author: Pascal Brokmeier
