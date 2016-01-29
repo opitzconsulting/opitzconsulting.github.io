@@ -1,24 +1,64 @@
----
-layout: compress
----
-<!doctype html>
-<html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
-<head>
-	{% include head %}
-</head>
-<body id="top-of-page" class="{{ page.format }}">
-	{% unless page.skip_boilerplate %}
-	{% include navigation %}
-	{% endunless %}
+<!DOCTYPE html>
+<html>
 
-	{% include masthead %}
+  {% include head.html %}
 
-	{{ content }}
+  <head>
+      <link rel="stylesheet" type="text/css" href="_sass/_base.scss"/>
+  </head>
+  <body>
 
-	{% unless page.skip_boilerplate %}
-	{% include footer %}
-	{% endunless %}
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="opitz-header mdl-layout__header">
+          <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title">opitzconsulting blog</span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
 
-	{% include footer_scripts %}
-</body>
+              <!--search-->
+              <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                  <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                      <i class="material-icons">search</i>
+                  </label>
+                  <div class="mdl-textfield__expandable-holder">
+                      <input class="mdl-textfield__input" type="text" id="search-field">
+                  </div>
+              </div>
+              <!-- Navigation. We hide it in small screens. -->
+              <nav class="mdl-navigation mdl-layout--large-screen-only">
+                  <a class="mdl-navigation__link" href="/posts">Beiträge</a>
+                  <a class="mdl-navigation__link" href="/authors">Autoren</a>
+              </nav>
+          </div>
+      </header>
+      <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">opitzconsulting</span>
+          <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="/posts">Beiträge</a>
+              <a class="mdl-navigation__link" href="/authors">Autoren</a>
+          </nav>
+      </div>
+      <main class="mdl-layout__content">
+
+          <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--2-col">left</div>
+              <div class="mdl-cell mdl-cell--8-col">
+                  {{content}}
+              </div>
+              <div class="mdl-cell mdl-cell--2-col">right</div>
+          </div>
+          {% include footer.html %}
+
+      </main>
+  </div>
+
+
+
+
+
+  <script type="text/javascript" src="/js/material.min.js"></script>
+  </body>
+
 </html>

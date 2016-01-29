@@ -1,8 +1,0 @@
-
-        {% include google_search %}
-	<div class="panel radius">
-		<h3>Neueste Beiträge</h3>
-          {% include list-posts entries='5' %}
-	</div>
-
-</aside>

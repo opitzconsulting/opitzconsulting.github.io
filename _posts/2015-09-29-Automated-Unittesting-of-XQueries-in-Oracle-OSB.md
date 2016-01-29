@@ -13,42 +13,40 @@ categories:
 
 In order to support a more agile project environment, OPITZ CONSULTING developed a Java/JUnit based SOA Unit Testing Framework. Among others, the framework was capable of using the Oracle libraries to run XQuery tests locally and verify their correctness. Over the course of time, Oracle released 12c and with it, changed its xquery files. A new extension (.xqy instead of .xq) was introduced and with it additional syntax. Oracle added a `(:: OracleAnnotationVersion "1.0" ::)` . After this, the testing framework needed to be updated to support such tags. Without an update, executing a query with the above annotation gave the following error: 
 
-{% highlight java %}
+```
 java.lang.RuntimeException: weblogic.xml.query.exceptions.XQueryStaticException: line 3, column 1: {err}XP0003: Invalid expression: either 'pragma' or 'extension' is required inside (:: ::)
-  at com.opitzconsulting.soa.testing.AbstractXQueryTest.setQuery(AbstractXQueryTest.java:56)
-  at de.home24.SalesOrderErrorListener.TransformationTest.testPrepareResponseTransformation(TransformationTest.java:25)
-  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:78)
-  at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:212)
-  at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:68)
-  at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+	at com.opitzconsulting.soa.testing.AbstractXQueryTest.setQuery(AbstractXQueryTest.java:56)
+	at de.home24.SalesOrderErrorListener.TransformationTest.testPrepareResponseTransformation(TransformationTest.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:78)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:212)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:68)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
 Caused by: weblogic.xml.query.exceptions.XQueryStaticException: line 3, column 1: {err}XP0003: Invalid expression: either 'pragma' or 'extension' is required inside (:: ::)
-  at weblogic.xml.query.exceptions.XQueryStaticException.create(XQueryStaticException.java:579)
-  at weblogic.xml.query.exceptions.XQueryException.create(XQueryException.java:127)
-  at weblogic.xml.query.exceptions.XQueryException.create(XQueryException.java:175)
-  at weblogic.xml.query.compiler.parser.ParserUtil.lineColException(ParserUtil.java:69)
-  at weblogic.xml.query.compiler.parser.ParserUtil.makeXQueryExceptionFrom(ParserUtil.java:91)
-  at weblogic.xml.query.compiler.parser.XQueryMainLexer.reportError(XQueryMainLexer.java:106)
-  at weblogic.xml.query.compiler.parser.XQueryMainLexer.mEXPR_COMMENT(XQueryMainLexer.java:3495)
-  ... 29 more
-{% endhighlight %}
-
+	at weblogic.xml.query.exceptions.XQueryStaticException.create(XQueryStaticException.java:579)
+	at weblogic.xml.query.exceptions.XQueryException.create(XQueryException.java:127)
+	at weblogic.xml.query.exceptions.XQueryException.create(XQueryException.java:175)
+	at weblogic.xml.query.compiler.parser.ParserUtil.lineColException(ParserUtil.java:69)
+	at weblogic.xml.query.compiler.parser.ParserUtil.makeXQueryExceptionFrom(ParserUtil.java:91)
+	at weblogic.xml.query.compiler.parser.XQueryMainLexer.reportError(XQueryMainLexer.java:106)
+	at weblogic.xml.query.compiler.parser.XQueryMainLexer.mEXPR_COMMENT(XQueryMainLexer.java:3495)
+	... 29 more
+```
 Updating the Testing Framework, we were able to continue unit testing xqueries  using the following syntax:
-<!--more-->
 
-{% highlight java %}
+```java
 OXQDataSource dataSource = new OXQDataSource();
 XQConnection connection = dataSource.getConnection();
 OXQEntity entity = new OXQEntity(query);
 OXQConnection ocon = OXQView.getConnection(connection);
 XQPreparedExpression expression = ocon.prepareExpression(entity);
 expression.executeQuery();
-{% endhighlight %}
+```
 
 However, in queries there are also other functions allowed. Among others `{fn-bea:($soapbody)}` would be a valid bea function. The above code however is not capable of handling such custom functions, resulting in the following error:
 
-{% highlight java %}
+```
 javax.xml.xquery.XQQueryException: line 49, column 27: {http://www.w3.org/2005/xqt-errors}XPST0081: The prefix "fn-bea" used in the qualified name "fn-bea:serialize" can not be resolved
 	at oracle.xml.xquery.xqjimpl.OXQCUtils.createXQQueryException(OXQCUtils.java:992)
 	at oracle.xml.xquery.xqjimpl.OXQCPreparedExpression.<init>(OXQCPreparedExpression.java:92)
@@ -67,7 +65,7 @@ Caused by: oracle.xml.xquery.exceptions.XQueryStaticException: line 49, column 2
 	at oracle.xml.xquery.exceptions.XQueryStaticException.create(XQueryStaticException.java:696)
 	at oracle.xml.xquery.exceptions.XQueryException.create(XQueryException.java:92)
 ...
-{% endhighlight %}
+```
 
 Our theory: Oracle created a superset of xquery implementing both the above mentioned Oracle `(:: ::)` annotations as well as the `{fn-bea: ... }` custom functions which were created by bea. 
 

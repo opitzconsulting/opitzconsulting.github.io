@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="mdl-cell mdl-cell--10-col mdl-cell--4-col-phone">
+  <!-- Post card-->
+  <div class="post mdl-grid">
+    <!-- arrow back button -->
+    <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+
+      <a href="/index.html" class="demo-nav__button">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900"
+                role="presentation">
+          <i class="material-icons">arrow_back</i>
+        </button>
+        Back to Home
+      </a>
+    </nav>
+
+
+    <div class="mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col">
+      <!--Github ribbon-->
+
+      <div class="mdl-card__media mdl-color-text--grey-50">
+        <h3>{{ page.title }}</h3>
+      </div>
+      <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+        <div class="avatar {% if page.author contains 'Pascal' %} avatar-pascal {% endif %}"></div>
+        <div>
+          <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}
+            {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        </div>
+        <div class="mdl-layout-spacer"></div>
+
+        {% if page.hascsvdownload %}
+        <button onclick="caloo.downloadCsv.call(caloo)"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Download Anki cards as CSV
+        </button>
+        {% endif %}
+
+      </div>
+      <div class="mdl-color-text--grey-700 mdl-card__supporting-text" id="b">
+        <div id="postContentWrapper">{{ content }}</div>
+      </div>
+      <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+        {% include disqus_comments.html %}
+      </div>
+
+
+    </div>
+
+    <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+      {% if page.next.url %}
+      <a href="{{page.next.url}}" class="demo-nav__button">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900"
+                role="presentation">
+          <i class="material-icons">arrow_back</i>
+        </button>
+        Newer
+      </a>
+      {% endif %}
+
+      <div class="section-spacer"></div>
+
+      {% if page.previous.url %}
+      <a href="{{page.previous.url}}" class="demo-nav__button">
+        Older
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900"
+                role="presentation">
+          <i class="material-icons">arrow_forward</i>
+        </button>
+      </a>
+      {% endif %}
+    </nav>
+  </div>
+
+</div>
+
+<!--<div id="toc" class="mdl-cell mdl-cell&#45;&#45;4-col mdl-card mdl-shadow&#45;&#45;10dp fixed"></div>-->
