@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<div class="grid">
+	<div class="col-3-12">
+		<img src="https://www.gravatar.com/avatar/{{ page.gravatar_hash }}?s=200&d=identicon" style="width:100%; max-width:200px"/>
+	</div>
+	<div class="col-9-12">
+		<h2>{{ page.name }}</h2>
+		<div class="bio">
+			{{ content }}
+		</div>
+ 	</div>
+	<div class="col-12-12">
+	<h2>Veröffentlichungen und Vorträge</h2>
+	<h3>Artikel</h3>
+	{% for article in page.articles %}
+	{{ page.name }}
+	{% for author in article.coauthors %}
+	{% assign found = false %}
+	{% for s_author in site.authors %}{% if s_author.username == author %}{% assign found = true %}; <a href="{{ site.baseurl }}{{s_author.url}}">{{ s_author.name }}</a>{% endif %}{% endfor %}{% unless author == article.coauthors.last %}; {% endunless %}
+	{% if found == false %}{{ author }}{% endif %}
+	{% endfor %}
+	: {{article.title}}{% if article.description %} &mdash; {{ article.description }}{% endif %}, in: {{ article.magazine }}, {{ article.edition }}
+	{% if article.link %}
+	[<a href="{{article.link}}"><i class="fa fa-globe"></i></a>]
+	{% endif %}
+	{% if article.file %}
+	[<a href="{{site.baseurl}}/files/publications/{{article.file}}"><i class="fa fa-file-pdf-o"></i></a>]
+	{% endif %}
+	{% endfor %}
+	<h3>Vorträge</h3>
+	{% for talk in page.talks %}
+	<h4>{{talk.title}}</h4>
+	<p>{{talk.description}}</p>
+	<ul>
+		{% for conference in talk.conferences %}
+			<li>{{conference.title}}
+			{% if conference.cospeaker %}mit {{conference.cospeaker}}{% endif %}
+			in {{conference.location}} am {{conference.date}}
+			{% if conference.link %}
+			<a href="{{conference.link}}">[<i class="fa fa-globe"></i>]</a>
+			{% endif %}
+			{% if conference.file %}
+			<a href="{{conference.file}}">[<i class="fa fa-file-o"></i>]</a>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+	<h2>Social Links</h2>
+	<div class="grid">
+	  <div class="col-1-1">
+	    <ul class="social">
+	    {% for profile in site.data.profiles %}
+	      <li><a href="{{profile.url}}">{% if profile.icon != null %}<i class="fa fa-2x fa-{{profile.icon}}"></i>{% else %}<strong>{{profile.service}}</strong>{% endif %}</a>&nbsp;</li>
+	    {% endfor %}
+	    </ul>
+	  </div>
+	</div>
+	<h3>Blogeinträge</h3>
+	<ul>
+	{% for post in site.posts %}
+		{% for author in post.authors %}
+			{% if author == page.username %}
+			   <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time> <a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+	</ul>
+</div>
+</div>

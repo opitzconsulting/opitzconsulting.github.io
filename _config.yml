@@ -25,7 +25,14 @@ collections:
     output: true
     permalink: /authors/:path/
 
+
 defaults:
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
   -
     scope:
       path: "" # an empty string here means all files in the project
