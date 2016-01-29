@@ -1,3 +1,7 @@
+body{
+    background-color: $background-gray;
+}
+
 .opitz-header{
     background:white;
     color: $grey-color;
@@ -8,4 +12,22 @@
 
 .mdl-card>a{
     text-decoration: none;
+}
+
+.post-nav {
+    display: flex;
+    color: $grey-color;
+}
+
+.section-spacer{
+    flex-grow: 1;
+}
+
+a.link-no-style{
+    text-decoration: none;
+    color: $mdl-color-text--grey-700;
+}
+
+.post>.mdl-card{
+    background: transparent;
 }

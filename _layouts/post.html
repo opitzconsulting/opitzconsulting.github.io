@@ -16,9 +16,10 @@ layout: default
     </nav>
 
     <!--Post Card-->
-    <div class="mdl-card mdl-shadow--10dp mdl-cell mdl-cell--12-col">
+    <div class="mdl-card mdl-cell mdl-cell--12-col">
         <!--Heading-->
-        <div class="mdl-card__media mdl-color-text--grey-50">
+
+        <div class="mdl-card__title mdl-card--expand">
             <h1>{{ page.title }}</h1>
         </div>
 
@@ -45,8 +46,8 @@ layout: default
 
     </div>
 
-    <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-        {% include post/forward_backward_nav.html %}
-    </nav>
+
+    {% include post/forward_backward_nav.html %}
+
 </div>
 
