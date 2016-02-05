@@ -1,21 +1,24 @@
 # blog | opitzconsulting
 
+Experimental blogging solution for our employees at OPITZ CONSULTING.
+
 ## TODOs
 
 * Next
-  * Comments
-  * Categories
-  * Excerpts for Posts
-  * Author Guideline
-    * Images
-    * Markdown
-    * Author Page
-    * Git / GitHub
+  * Comments (powered by Disqus)
+  * Categories (lets stick our heads together and find the right categories)
+  * Excerpts for Posts (generate it from the article or provide teaser?)
+  * Author Guidelines
+    * Images (where to put? what size? what quality?)
+    * Markdown (what to use? what not? basics?)
+    * Author Page (how to? what and what not?)
+    * Git / GitHub (workflow: fork, branch, create, push, pull req)
   * Pagination
+
 * Later
   * Site Layout
-    * Timeline
-    * Design
-  * Multiple Authors of a Post
-  * Blog Post Migration from Wordpress Blog
-  * Search
+    * Timeline (see bootflat for great example)
+    * Design (responsive, baby!)
+  * Multiple Authors of a Post (maybe... do we really have this case? yagni!)
+  * Blog Post Migration from old blog (what to automate?)
+  * Search (json metafile + angular way)
