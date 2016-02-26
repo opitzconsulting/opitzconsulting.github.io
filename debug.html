@@ -1,0 +1,38 @@
+---
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>debug</title>
+  <meta name="robots" content="noindex, follow">
+</head>
+<body>
+
+<h1>Beiträge mit einer Kategorie, für die es keine Seite gibt</h1>
+
+<table>
+  <tr>
+    <th>Thema</th>
+    <th>Beitrag</th>
+  </tr>
+  {% for post in site.posts %}
+    {% for category in post.categories %}
+      {% assign topic = false %}
+      {% for temp_topic in site.topics %}
+        {% if temp_topic.category == category %}
+          {% assign topic = temp_topic %}
+        {% endif %}
+      {% endfor %}
+      {% if topic == false %}
+        <tr>
+          <td>{{ category }}</td>
+          <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</table>
+
+</body>
+</html>

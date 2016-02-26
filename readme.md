@@ -7,13 +7,12 @@ Experimental blogging solution for our employees at OPITZ CONSULTING.
 * Next
   * Comments (powered by Disqus)
   * Categories (lets stick our heads together and find the right categories)
-  * Excerpts for Posts (generate it from the article or provide teaser?)
   * Author Guidelines
     * Images (where to put? what size? what quality?)
     * Markdown (what to use? what not? basics?)
     * Author Page (how to? what and what not?)
     * Git / GitHub (workflow: fork, branch, create, push, pull req)
-  * Pagination
+  * Author Image
 
 * Later
   * Site Layout

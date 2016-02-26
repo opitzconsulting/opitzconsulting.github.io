@@ -162,7 +162,22 @@
     }
 }
 
+/**
+ * Pagination
+ */
 
+.pagination {
+  list-style: none;
+  margin: auto 0;
+
+  .next {
+    float: right;
+  }
+
+  .prev {
+    float: left;
+  }
+}
 
 /**
  * Page content

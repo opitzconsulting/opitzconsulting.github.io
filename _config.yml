@@ -33,12 +33,25 @@ github_username:  opitzconsulting
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
+paginate: 5
+gems: [jekyll-paginate]
+paginate_path: "/pages/:num/"
+
 collections:
   authors:
     output: true
     permalink: /authors/:path/
+  topics:
+    output: true
+    permalink: /categories/:path/
 
 defaults:
+  -
+    scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "category"
   -
     scope:
       path: ""

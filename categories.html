@@ -1,0 +1,13 @@
+---
+layout: page
+title: Themen
+permalink: /categories/
+---
+
+<p>Hier finden Sie alle Themengebiete über die wir in diesem Blog schreiben:</p>
+
+<ul class="categories-list">
+  {% for category in site.topics | sort: 'title' %}
+    <li><a class="categories-link" href="{{ category.url | prepend: site.baseurl }}">{{ category.title }}</a></li>
+  {% endfor %}
+</ul>
