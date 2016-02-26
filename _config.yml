@@ -31,6 +31,7 @@ github_username:  opitzconsulting
 
 # Build Settings
 markdown: kramdown
+permalink: /:year/:month/:day/:title/
 
 collections:
   authors:
