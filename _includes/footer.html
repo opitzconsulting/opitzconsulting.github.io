@@ -18,13 +18,13 @@
             <i class="fa fa-home"></i> <a href="http://www.opitz-consulting.com">opitz-consulting</a>
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            <i class="fa fa-github"></i> <a href="https://github.com/{{ site.github_username }}"> {{ site.github_username}}</a>
           </li>
           {% endif %}
 
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            <i class="fa fa-twitter"></i> <a href="https://twitter.com/{{ site.twitter_username }}"> {{ site.twitter_username }}</a>
           </li>
           {% endif %}
           <li>

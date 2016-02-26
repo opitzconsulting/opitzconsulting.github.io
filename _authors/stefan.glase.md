@@ -3,6 +3,7 @@ title: Stefan Glase
 username: stefan.glase
 email: stefan.glase@opitz-consulting.com
 website: http://www.stefanglase.de
+picture: stefan.glase.jpg
 social:
   twitter: stefanglase
   github: codescape

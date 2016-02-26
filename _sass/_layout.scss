@@ -163,6 +163,47 @@
 }
 
 /**
+ * Author Site
+ */
+.author {
+
+  .fa {
+    min-width: 1em;
+    color: #828282;
+  }
+
+  .unstyled {
+    list-style: none;
+  }
+
+  .author-picture {
+    float: left;
+    max-width: 140px;
+    margin-right: 2em;
+    margin-bottom: 1em;
+  }
+
+  .post-content {
+    margin-bottom: 0;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  .social-media {
+    font-size: 1.5em;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}
+/**
  * Pagination
  */
 

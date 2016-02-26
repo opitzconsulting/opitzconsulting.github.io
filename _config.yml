@@ -27,16 +27,20 @@ url: "http://opitzconsulting.github.io"
 
 # Social Media Links
 twitter_username: OC_WIRE
-github_username:  opitzconsulting
+github_username: opitzconsulting
 
-# Build Settings
+# Markdown
 markdown: kramdown
+
+# Permanent Links
 permalink: /:year/:month/:day/:title/
 
+# Pagination
 paginate: 5
 gems: [jekyll-paginate]
 paginate_path: "/pages/:num/"
 
+# Collections
 collections:
   authors:
     output: true
@@ -45,6 +49,7 @@ collections:
     output: true
     permalink: /categories/:path/
 
+# Layout Defaults
 defaults:
   -
     scope:
