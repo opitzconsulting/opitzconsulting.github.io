@@ -1,9 +1,8 @@
 ---
 title: "Der Mythos der trunk-basierten Entwicklung"
-date: "2016-02-07"
 author: richard.attermeyer
 categories:
-  - continuousdelivery
+  - Continuous Delivery
 tags:
   - DevOps
   - Continuous Delivery

@@ -3,6 +3,7 @@ title: Richard Attermeyer
 username: richard.attermeyer
 email: richard.attermeyer@opitz-consulting.com
 website: http://www.rattermeyer.de
+picture: richard.attermeyer.jpg
 social:
   twitter: rattermeyer
   github: rattermeyer
