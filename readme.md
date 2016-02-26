@@ -1,4 +1,4 @@
-# blog | opitzconsulting
+# opitzconsulting blog
 
 Experimental blogging solution for our employees at OPITZ CONSULTING.
 
@@ -13,6 +13,7 @@ Experimental blogging solution for our employees at OPITZ CONSULTING.
     * Author Page (how to? what and what not?)
     * Git / GitHub (workflow: fork, branch, create, push, pull req)
   * Author Image
+  * Imprint
 
 * Later
   * Site Layout

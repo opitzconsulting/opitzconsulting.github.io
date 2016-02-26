@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Agile Retreat v3"
 categories: agilität
 author: stefan.glase
