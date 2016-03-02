@@ -12,6 +12,7 @@ Experimental blogging solution for our employees at OPITZ CONSULTING.
     * Markdown (what to use? what not? basics?)
     * Author Page (how to? what and what not?)
     * Git / GitHub (workflow: fork, branch, create, push, pull req)
+  * Google Analytics
 
 * Later
   * Site Layout
