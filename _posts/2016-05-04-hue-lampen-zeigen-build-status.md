@@ -10,7 +10,7 @@ tags:
 
 In vielen Teams hat sich der Buildmonitor von Jenkins zur Überwachung der Buildjobs etabliert. Einfach einen Monitor an einer entsprechende Stelle aufstellen, Jenkins konfigurieren und schon hat der geneigte Entwickler alles im Blick.
 
-![Beispielhafter Buildmonitor](/img/posts/2016-03-20/build_monitor.jpg)
+![Beispielhafter Buildmonitor](/img/posts/2016-05-04/build_monitor.jpg)
 
 In einem aktuellen Projekt konnte aber nicht jeder Entwickler direkt auf den Buildmonitor schauen. Mehrere Monitore waren im speziellen Fall nicht möglich,
 also musste eine Alternative gefunden werden.
@@ -25,7 +25,7 @@ ebenfalls eine Restschnittstelle, es liegt also auf der Hand beide Möglichkeite
 Auf dem Jenkins muss eine Buildmonitor-View eingerichtet werden. In diese Buildmonitor-View werden dann alle Projekte aufgenommen die es zu überwachen gilt.
 Dabei können die Jobs entweder einzeln ausgewählt oder über einen regulären Ausdruck bestimmt werden.
 
-![Anlegen des Buildmonitors](/img/posts/2016-03-20/jenkins-config-1.jpg)
+![Anlegen des Buildmonitors](/img/posts/2016-05-04/jenkins-config-1.jpg)
 
 Ist die View angelegt, ist sie über eine URL erreichbar. Diese View kann nun auch als JSON Repräsentation dargestellt werden. Dazu muss lediglich der
 Präfix `/api/json?pretty=true` an die URL angefügt werden.
