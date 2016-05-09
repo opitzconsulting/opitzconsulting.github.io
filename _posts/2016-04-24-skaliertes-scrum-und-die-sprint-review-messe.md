@@ -8,7 +8,7 @@ Seit mittlerweile bald vier Jahren bin als Scrum Master in einem agilen Scrum Te
 
 Liefern bedeutet nicht nur Ergebnisse über einen imaginären Zaun werfen. Ganz im Gegenteil, es geht darum frühe Feedbackschleifen zu etablieren und das gewonnene wertvolle Feedback in die weitere Arbeit einfließen zu lassen. Hierfür sieht Scrum das [Sprint Review Meeting](http://www.scrumguides.org/scrum-guide.html#events-review) vor. In diesem Meeting stellt das Scrum Team Kunden und Interessierten die Weiterentwicklung vor.
 
-![Präsentation am Stand](/img/2016-04-24/posts/001.jpg)
+![Präsentation am Stand](/img/posts/2016-04-24/001.jpg)
 
 Aus anfangs vier Teams sind mittlerweile achtzehn Scrum Teams geworden, die von der iOS App über das zentrale Workflow-Management bis hin zum Datawarehouse die Weiterentwicklung und Adaption der Software an neue Anforderungen und Wünsche sicherstellen. Alle diese Teams freuen sich, in regelmäßigen Abständen ihre Ergebnisse interessierten Fachabteilungen und Anforderern vorzustellen.
 
