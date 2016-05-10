@@ -2,7 +2,7 @@
 title: "Anzeige des Jenkins Buildstatus mit Hue-Lampen"
 author: marco.buss
 categories:
-  - Continuous Delivery
+  - continuous delivery
 tags:
   - DevOps
   - Continuous Delivery

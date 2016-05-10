@@ -17,7 +17,7 @@ layout: default
             {% endif %}
           {% endfor %}
           {% if topic %}
-            <a href="/categories/{{ topic.category }}" title="Artikel zum Thema {{ topic.title }}">{{ topic.title }}</a>
+            <a href="{{ topic.url | prepend: site.baseurl }}" title="Artikel zum Thema {{ topic.title }}">{{ topic.title }}</a>
           {% else %}
             {{ category | capitalize }}
           {% endif %}

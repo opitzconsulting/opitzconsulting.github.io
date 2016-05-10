@@ -1,6 +1,6 @@
 ---
 title: Skaliertes Scrum und die Sprint Review Messe
-categories: agilität
+categories: agilitaet
 author: stefan.glase
 ---
 
