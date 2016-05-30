@@ -14,7 +14,7 @@ tags:
 
 ---
 
-Nur noch wenige Wochen und die Fußball-Europameisterschaft öffnet ihre Tore in Frankreich. Wenn auch nur alle zwei bzw. vier Jahre (EM bzw. WM), so ist das gemeinsame Wetteifern unter Freunden und Kollegen ein großer Spaß. Mit Bier und Grillwurst bewaffnet fiebert man dem Weiterkommen der deutschen Mannschaft bis zum Schlusspfiff entgegen. Um dem Wetteifern noch mehr Nachdruck zu verleihen fehlt es nur noch an einem kleinen Tippspiel, bei dem man seine Kenntnisse über die vermeintlich bessere Mannschaft unter Beweis stellen kann.
+Nur noch wenige Tage und die Fußball-Europameisterschaft öffnet ihre Tore in Frankreich. Wenn auch nur alle zwei bzw. vier Jahre (EM bzw. WM), so ist das gemeinsame Wetteifern unter Freunden und Kollegen ein großer Spaß. Mit Bier und Grillwurst bewaffnet fiebert man dem Weiterkommen der deutschen Mannschaft bis zum Schlusspfiff entgegen. Um dem Wetteifern noch mehr Nachdruck zu verleihen fehlt es nur noch an einem kleinen Tippspiel, bei dem man seine Kenntnisse über die vermeintlich bessere Mannschaft unter Beweis stellen kann.
 
 ## Von der Idee zur Anwendung
 
