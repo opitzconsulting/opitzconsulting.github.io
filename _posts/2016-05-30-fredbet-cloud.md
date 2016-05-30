@@ -70,48 +70,48 @@ Hier ein Beispiel für ein Stack-File mit MariaDB und Graylog-Server:
 {% highlight yaml %}
 
     fredbet:
-	  image: 'username/fredbet:latest'
-	  environment:
-	    - JDBC_PASSWORD=password
-	    - 'JDBC_URL=jdbc:mariadb://mariadb:3306/fredbetdb'
-	    - JDBC_USERNAME=fred
-	    - spring.profiles.active=docker
-	  links:
-	    - graylog
-	    - mariadb
-	  ports:
-	    - '80:8080'
-	  tags:
-	    - app
-	graylog:
-	  image: 'graylog2/allinone:latest'
-	  environment:
-	    - GRAYLOG_NODE_ID=my_graylog
-	    - GRAYLOG_PASSWORD=password
-	    - GRAYLOG_SERVER_SECRET=secret
-	    - GRAYLOG_TIMEZONE=Europe/Berlin
-	  ports:
-	    - '80:9000'
-	    - '12201:12201'
-	    - '12202:12202'
-	  tags:
-	    - graylog
-	  volumes:
-	    - '/graylog/data:/var/opt/graylog/data'
-	    - '/graylog/logs:/var/log/graylog'
-	mariadb:
-	  image: 'mariadb:10.1.11'
-	  environment:
-	    - MYSQL_DATABASE=fredbetdb
-	    - MYSQL_PASSWORD=password
-	    - MYSQL_ROOT_PASSWORD=secred
-	    - MYSQL_USER=fred
-	  ports:
-	    - '3306:3306'
-	  tags:
-	    - db
-	  volumes:
-	    - /data/db
+      image: 'username/fredbet:latest'
+      environment:
+        - JDBC_PASSWORD=password
+        - 'JDBC_URL=jdbc:mariadb://mariadb:3306/fredbetdb'
+        - JDBC_USERNAME=fred
+        - spring.profiles.active=docker
+      links:
+        - graylog
+        - mariadb
+      ports:
+        - '80:8080'
+      tags:
+        - app
+    graylog:
+      image: 'graylog2/allinone:latest'
+      environment:
+        - GRAYLOG_NODE_ID=my_graylog
+        - GRAYLOG_PASSWORD=password
+        - GRAYLOG_SERVER_SECRET=secret
+        - GRAYLOG_TIMEZONE=Europe/Berlin
+      ports:
+        - '80:9000'
+        - '12201:12201'
+        - '12202:12202'
+      tags:
+        - graylog
+      volumes:
+        - '/graylog/data:/var/opt/graylog/data'
+        - '/graylog/logs:/var/log/graylog'
+    mariadb:
+      image: 'mariadb:10.1.11'
+      environment:
+        - MYSQL_DATABASE=fredbetdb
+        - MYSQL_PASSWORD=password
+        - MYSQL_ROOT_PASSWORD=secred
+        - MYSQL_USER=fred
+      ports:
+        - '3306:3306'
+      tags:
+        - db
+      volumes:
+        - /data/db
 
 {% endhighlight %}
 
