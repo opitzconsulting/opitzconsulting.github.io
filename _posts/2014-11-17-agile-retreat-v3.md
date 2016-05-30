@@ -1,6 +1,6 @@
 ---
 title:  "Agile Retreat v3"
-categories: agilität
+categories: agilitaet
 author: stefan.glase
 ---
 

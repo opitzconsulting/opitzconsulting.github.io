@@ -92,7 +92,58 @@
     }
 }
 
+/**
+ * Share Buttons
+ */
+.share {
 
+	p {
+		text-align: center;
+	}
+	
+	ul {
+		list-style: none;
+		text-align: center;
+	}
+	
+	li {
+		font-size: 16px;
+		display: inline-block;
+		margin: 5px 0;
+	}
+	
+	a {
+		padding: 1px 10px;
+		border-radius: 6px;
+		color: #ffffff;	
+	}
+	
+	a:hover {
+		color: rgba(255,255,255,0.75);
+		text-decoration: none;
+	}
+	
+	li.twitter a {
+		background-color: #55acee;
+	}
+	
+	li.facebook a {
+		background-color: #3b5998;
+	}
+	
+	li.google-plus a {
+		background-color: #dc4e41;
+	}
+	
+	li.linkedin a {
+		background-color: #0077b5;
+	}
+	
+	li.xing a {
+		background-color: #026466;
+	}
+
+} 
 
 /**
  * Site footer
