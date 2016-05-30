@@ -16,13 +16,13 @@ tags:
 
 Nur noch wenige Wochen und die Fußball-Europameisterschaft öffnet ihre Tore in Frankreich. Wenn auch nur alle zwei bzw. vier Jahre (EM bzw. WM), so ist das gemeinsame Wetteifern unter Freunden und Kollegen ein großer Spaß. Mit Bier und Grillwurst bewaffnet fiebert man dem Weiterkommen der deutschen Mannschaft bis zum Schlusspfiff entgegen. Um dem Wetteifern noch mehr Nachdruck zu verleihen fehlt es nur noch an einem kleinen Tippspiel, bei dem man seine Kenntnisse über die vermeintlich bessere Mannschaft unter Beweis stellen kann.
 
-# Von der Idee zur Anwendung #
+## Von der Idee zur Anwendung
 
 Die Idee wäre also geboren. Doch welche Technologie wählt man für eine kleine Anwendung, die man mal so "nebenbei" entwickeln kann und bis spätestens zum Eröffnungsspiel produktiv sein sollte? Nach ein paar Überlegungen sollten diese nicht-funktionalen Anforderungen erfüllt sein:
 
 - Die Entwicklungsumgebung sollte möglichst einfach aufzusetzen sein.
 - Die Anwendung sollte auch über das Smartphone bedienbar sein. So kann ein (fast) vergessener Tipp noch kurz vor dem Anpfiff vor dem Fernseher abgegeben werden.
-- Die Zeit für Build, Deployment und Betrieb der Anwendung sollte möglichst kurz und komfortabel sein. Aus Entwicklersicht möchte man sein knappe Zeit für die wirklich wichtigen Features investieren und nicht mit der Einrichtung von Servern.
+- Die Zeit für Build, Deployment und Betrieb der Anwendung sollte möglichst kurz und komfortabel sein. Aus Entwicklersicht möchte man seine knappe Zeit für die wirklich wichtigen Features investieren und nicht mit der Einrichtung von Servern.
 
 Nach reichlicher Überlegung wurde folgender Technologie-Stack gewählt:
 
@@ -34,7 +34,7 @@ Nach reichlicher Überlegung wurde folgender Technologie-Stack gewählt:
 - Betrieb als Docker-Container über die [Docker Cloud](https://www.docker.com/products/docker-cloud) mit Hosting über [Amazon Web Services](https://aws.amazon.com/de/) (AWS)
 - Monitoring der Anwendung über [Graylog 2](https://www.graylog.org/)
 
-Das Aufsetzen einer neuen Anwendung mit Spring Boot ist recht einfach. Über die [Spring Initializr](http://start.spring.io) Website kann man sich das Grundgerüst als Maven oder Gradle Projekt direkt generieren lassen. Spring Boot bringt gleich den benötigten Web-Servlet-Container (Tomcat oder Jetty) mit und erzeugt eine komplette JAR-Datei (sog. Fat-Jar), die alle Abhängigkeiten inkl. dem Servlet-Container beinhaltet. So muss kein separater Tomcat für Entwicklung und Betrieb installiert werden. Durch die Bündelung der Anwendung mit der Laufzeitumgebung eignet sich Spring Boot besonders für [Microservice-Architekturen](https://de.wikipedia.org/wiki/Microservices). In unserem Fall macht eine weitere Unterteilung nach fachlichen Gesichtspunkten aufgrund der geringen Anwenungsgröße allerdings keinen Sinn. Aus Architektursicht entspricht die (autonome) Anwendung daher eher einem [Self-Contained System](http://scs-architecture.org).
+Das Aufsetzen einer neuen Anwendung mit Spring Boot ist recht einfach. Über die [Spring Initializr](http://start.spring.io) Website kann man sich das Grundgerüst als Maven oder Gradle Projekt direkt generieren lassen. Spring Boot bringt gleich den benötigten Web-Servlet-Container (Tomcat oder Jetty) mit und erzeugt eine komplette JAR-Datei (sog. Fat-Jar), die alle Abhängigkeiten inkl. dem Servlet-Container beinhaltet. So muss kein separater Tomcat für Entwicklung und Betrieb installiert werden. Durch die Bündelung der Anwendung mit der Laufzeitumgebung eignet sich Spring Boot besonders für [Microservice-Architekturen](https://de.wikipedia.org/wiki/Microservices). In unserem Fall macht eine weitere Unterteilung nach fachlichen Gesichtspunkten aufgrund der geringen Anwendungsgröße allerdings keinen Sinn. Aus Architektursicht entspricht die (autonome) Anwendung daher eher einem [Self-Contained System](http://scs-architecture.org).
 
 Die Entwicklungsumgebung ist schnell eingerichtet, da jede Spring Boot Anwendung über eine Start-Klasse mit main-Methode verfügt, über die sich die Anwendung inkl. Tomcat starten lässt. Über [Spring Data JPA](http://projects.spring.io/spring-data-jpa/) lässt sich die Integration mit der Datenbank schnell erledigen. Auf Basis einer Methodennamen-Konvention kann hier weitgehend auf die Implementierung eigener Abfragen verzichtet werden.
 
@@ -44,7 +44,7 @@ Nach ein paar fleißigen Stunden kann sich unser Tippspiel schon sehen lassen:
 
 ![Screenshot der Anwendung](/img/posts/2016-05-30/Screenshot_fredbet.jpg)
 
-#Einrichtung einer Deployment Pipeline#
+## Einrichtung einer Deployment Pipeline
 
 Nachdem das Tippspiel einen vorzeigbaren Stand erreicht hat, soll es auch Freunden und Kollegen möglich sein die Anwendung zu testen bzw. später auch zu nutzen. Da diese Situation nach jeder Änderung wieder eintreten wird, soll dieser Prozess möglichst einfach wiederholbar sein. Das Zauberwort heißt "[Continuous Delivery](https://continuousdelivery.com/)" und führt letztendlich zu einer Automatisierung der einzelnen Schritte vom Build bis zum Deployment der Anwendung in Produktion.
 
@@ -60,7 +60,7 @@ Die ersten beiden Stages werden automatisch nach einem Commit in die Versionsver
 
 Wer keinen eigenen CD-Server betreiben möchte, kann auch auf eine gehostete Alternative setzen. Ein Beispiel dafür wäre z.B. [CircleCI](https://circleci.com/), dass ebenfalls das Erstellen von Docker-Containern unterstützt.
 
-# Betrieb in der Docker Cloud und Amazon Web Services (AWS) #
+## Betrieb in der Docker Cloud und Amazon Web Services (AWS)
 
 In Zeiten von Continuous Delivery, DevOps und Cloud Computing ist es einfacher den je eine Anwendung zu betreiben. Die Angebote für Platform as a Service (PaaS) Dienstleistungen sind mittlerweile recht umfangreich und vielfältig geworden. Aus Entwicklersicht ist es dabei besonders komfortabel auf eine bestehende Cloud-Infrastruktur zurückgreifen zu können. Die Installation der Anwendung in einem einheitlichen Format in Form eines Docker-Containers inklusive der Laufzeitumgebung macht die Inbetriebnahme noch einfacher und weniger fehleranfällig, als in einem proprietären Format, wie z.B. WAR oder EAR-Dateien.
 
@@ -131,7 +131,7 @@ Das Tippspiel ist nun öffentlich erreichbar. Die Endpoint-URL ist allerdings no
 
 Abhilfe schafft hier die Registrierung einer eigenen Domain. Das geht z.B. über den [Amazon Route 53-Service](https://aws.amazon.com/de/route53/) besonders komfortabel. Die Beantragung, Einrichtung und Abrechnung erfolgt dann über das Amazon-Konto. Mit einem DNS-Eintrag kann dann von dem registrierten Domain-Namen auf die Docker-Cloud-URL weitergeleitet werden.
 
-# Monitoring mit Graylog 2 #
+## Monitoring mit Graylog 2
 
 In der Docker Cloud steht bereits ein rudimentäres Monitoring bereit. Das beschränkt sich allerdings nur auf den Zugriff der Log-Konsole.
 
@@ -167,7 +167,7 @@ Für unser Tippspiel wurde der zweite Ansatz gewählt. Die Log4J2-Konfiguration 
 
 ![Graylog Dashboard](/img/posts/2016-05-30/graylog_dashboard.jpg)
 
-# Fazit #
+## Fazit
 
 Die Entwicklung des Tippspiels mittels Spring Boot, Docker und Docker Cloud hat sich als sehr einfach und komfortabel herausgestellt. Die Deployment-Pipeline übernimmt dabei die lästigen Arbeiten für die Produktivnahme von Änderungen. Die Kosten bleiben dabei noch überschaubar: Der Docker Cloud Account ist für einen Node und eine private Registry kostenlos. Bei einer AWS-Neuregistrierung kann man eine Micro-Instanz ein Jahr lang kostenlos betreiben. Lediglich ein paar Cent für das DNS-Routing und ein paar Euro für die Domain-Registrierung werden fällig.
 
