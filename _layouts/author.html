@@ -9,7 +9,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
-  {% if page.website %}
+  {% if page.website or page.email %}
   <ul class="unstyled">
     {% if page.email %}
     <li><i class="fa fa-envelope"></i> <a href="mailto:{{ page.email }}">{{ page.email }}</a></li>

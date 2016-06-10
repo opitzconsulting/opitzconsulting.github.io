@@ -17,7 +17,7 @@ layout: default
             {% endif %}
           {% endfor %}
           {% if topic %}
-            <a href="/categories/{{ topic.category }}" title="Artikel zum Thema {{ topic.title }}">{{ topic.title }}</a>
+            <a href="{{ topic.url | prepend: site.baseurl }}" title="Artikel zum Thema {{ topic.title }}">{{ topic.title }}</a>
           {% else %}
             {{ category | capitalize }}
           {% endif %}
@@ -42,5 +42,24 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <div class="share">
+	{% include share.html %}
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+    this.page.url = '{{ site.url }}{{ page.url }}';
+    this.page.identifier = '{{ page.id }}';
+  };
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//opitzconsultingblog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 </article>
