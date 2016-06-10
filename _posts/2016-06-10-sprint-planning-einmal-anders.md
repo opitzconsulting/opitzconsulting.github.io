@@ -10,7 +10,7 @@ Nach dem Projektsetup und einer theoretischen Einführung des Teams in die neue 
 
 Das Team, bestehend aus 7 Entwicklern und 2 Testern war eifrig beschäftigt, tauschte sich aus und schrieb Task-Kärtchen für das Sprint-Board. Einzig ein Teammitglied - eine Testerin - war recht schnell damit fertig und hatte genau ein Kärtchen verfasst. Voller Stolz präsentierte sie dem Team das Kärtchen auf welchem groß **Testen!** stand.
 
-![Testen!](/img/posts/2016-05-13/001.jpg)
+![Testen!](/img/posts/2016-06-10/001.jpg)
 
 Daraufhin diskutierten wir, was sie denn so alles beim Testen konkret zu tun habe? Nach einer weiteren Weile fragte ich dann, ob ein Kärtchen für all die vielen unterschiedlichen Aufgaben nicht vielleicht doch ein bisschen zu wenig ist?
 
