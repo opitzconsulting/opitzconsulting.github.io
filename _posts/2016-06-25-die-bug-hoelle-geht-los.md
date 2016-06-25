@@ -8,7 +8,7 @@ Scrum sieht vor, dass zum Ende eines jeden Sprints ein *Product Increment* breit
 
 All DONE am Ende eines Sprints (Sprint Review Meeting) bedeutet DONE!
 
-Im engeren Sinne ist dies dadurch geprägt, dass die zu Sprintbeginn im (**Sprint Planning I**) zugesagten User Stories vom Scrum Team
+Im engeren Sinne ist dies dadurch geprägt, dass die zu Sprintbeginn im (*Sprint Planning I*) zugesagten User Stories vom Scrum Team
 
 * umgesetzt,
 * getestet und
