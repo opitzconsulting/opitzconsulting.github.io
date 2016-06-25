@@ -1,12 +1,12 @@
 ---
-title: "Die Bug-Hölle geht los - _pünktlich_ zum GoLive"
+title: "Die Bug-Hölle geht los - pünktlich zum GoLive"
 categories: agilitaet
 author: daniel.strauch
 ---
 
-Scrum sieht vor, dass zum Ende eines jeden Sprints ein **Product Increment** breitgestellt wird, welches **potentially shippable** ist. Dies bedeutet, im weiteren Sinne, dass die erstellte **Produkt-Verbesserung** einen Mehrwert stiftet, der auch direkt "geerntet" werden könnte (**ROI**), wenn der **Product Owner** einem Release zustimmt. Man könnte auch sagen: **DONE**.
+Scrum sieht vor, dass zum Ende eines jeden Sprints ein *Product Increment* breitgestellt wird, welches *potentially shippable* ist. Dies bedeutet, im weiteren Sinne, dass die erstellte Produktverbesserung einen Mehrwert stiftet, der auch direkt "geerntet" werden kann (Return on Invest), wenn der *Product Owner* einer Veröffentlichung zustimmt. Man könnte auch sagen: **DONE**.
 
-All DONE am Sprintende (Review Meeting) bedeutet DONE!
+All DONE am Ende eines Sprints (Sprint Review Meeting) bedeutet DONE!
 
 Im engeren Sinne ist dies dadurch geprägt, dass die zu Sprintbeginn im (**Sprint Planning I**) zugesagten User Stories vom Scrum Team
 
@@ -24,7 +24,7 @@ Die Aufgaben während eines Sprints beinhalten nicht nur die Erstellung der Prod
 
 Akzeptanzkriterien müssen vor der Realisierung einer User Story bekannt sein und / oder aktiv vom Scrum Team erarbeitet werden. Alle Seiten, insbesondere der Product Owner und das Entwicklerteam, müssen ein gemeinsames Verständnis entwickeln, was DONE bedeutet und beinhaltet, _bevor_ mit einer Realisierung begonnen wird.
 
-Das Scrum Ereignis **Review** ist der *spätest mögliche Zeitpunkt*, um ein Feature, eine Produkt-Verbesserung oder ein Inkrement dem Product Owner zu zeigen / vorzustellen. Alle Tests und Quality Gates bis zur Lieferung (DONE) sollten erfolgreich durchlaufen sein, so dass sich beim Review Meeting alle entspannen können und die Frage
+Das Scrum Ereignis *Sprint Review* ist der *spätest mögliche Zeitpunkt*, um ein Feature, eine Produkt-Verbesserung oder ein Inkrement dem Product Owner zu zeigen / vorzustellen. Alle Tests und Quality Gates bis zur Lieferung (DONE) sollten erfolgreich durchlaufen sein, so dass sich beim Review Meeting alle entspannen können und die Frage
 
 > "Nehmen wir es gleich live?"
 
