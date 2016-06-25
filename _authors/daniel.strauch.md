@@ -1,6 +1,6 @@
 ---
 title: Daniel Strauch
-username: daniel-strauch
+username: daniel.strauch
 email: daniel.strauch@opitz-consulting.com
 picture: daniel.strauch.jpg
 topics:
