@@ -23,7 +23,7 @@ Ich weiß nicht so recht, was der Mann von mir will. (Mal ganz abgesehen davon, 
 
 Ich finde es schade, wenn bei der Präsentation eines Ergebnisses im Sprint-Review genau die Seite gezeigt wird, auf der dick und fett steht: „Offener Punkt! Bitte bis zum Review noch klären“. Aber so ist das nun mal. Nicht akzeptiert! Aufstehen, Krönchen richten, im nächsten Sprint zu Ende machen.    
 
-Keiner hier arbeitet aus purem Spaß an der Freude, sondern weil er dafür bezahlt wird. Und mal ganz ehrlich: Wir sind wir doch nicht im Kindergarten. „Das ist ein gaaaanz tolles Bild, Michelle! Das hast du fein gemacht. Noch schöner wäre es halt gewesen, wenn du es nicht mit Edding auf Mama’s Mahagoni Tisch gemalt hättest.“    
+Keiner hier arbeitet aus purem Spaß an der Freude, sondern weil er dafür bezahlt wird. Und mal ganz ehrlich: Wir sind doch nicht im Kindergarten. „Das ist ein gaaaanz tolles Bild, Michelle! Das hast du fein gemacht. Noch schöner wäre es halt gewesen, wenn du es nicht mit Edding auf Mama’s Mahagoni Tisch gemalt hättest.“    
 
 Tatsächlich zeigt die Erfahrung, dass die Aufweichung der Erfüllung von Kriterien aus der Definition of Done dazu führt, dass nicht nur die Qualität des Produktes sondern auch der Qualitätsanspruch unserer Teams sinkt. Die Abnahme nicht fertiger Stories fördert den Pfusch bei ihrer Bearbeitung und führt zu Frust bei parallel arbeitenden Teams, die alles dafür tun, eine User Story in bestmöglicher Qualität und fertig abzuliefern. Deshalb steht es für mich nicht zur Debatte, dass wir mal vier Augen zu drücken, wenn eine User Story nicht zu 100% fertig ist. Auch nicht, wenn die geleisteten 98% großartig sind.    
 
@@ -35,4 +35,4 @@ Meine Aufgabe ist es nicht, Teammitgliedern das unberechtigte aber wohlige Gefü
 
 So geht Wertschöpfung, so geht Team und so geht Qualität.    
 
-Sollte im Agilen Manifest irgendwann mal stehen „Wir schätzen gut gemeinte Tätigkeiten mehr als hohe Qualität“, werde ich mich agerne bei meinem Kollegen entschuldigen.
+Sollte im Agilen Manifest irgendwann mal stehen „Wir schätzen gut gemeinte Tätigkeiten mehr als hohe Qualität“, werde ich mich gerne bei meinem Kollegen entschuldigen.
