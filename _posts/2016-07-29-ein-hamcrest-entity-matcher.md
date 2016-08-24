@@ -30,7 +30,7 @@ Nach Ausführung des Tests werden alle Property-Abweichungen angezeigt:
 
 # Setup
 
-Zur Demonstration des Matchers wird im Folgendem die Klasse Person verwendet:
+Zur Demonstration des Matchers wird die Klasse Person verwendet:
 
 {% highlight java %}
 public class Person {
@@ -60,7 +60,8 @@ public class Person {
 {% endhighlight %}
 
 # Motivation
-Zunächst wird beschrieben, welche Möglichkeiten zum Testen von Properties mit JUnit und Hamcrest es bereits gibt. Jeder dieser Ansätze hat einige Nachteile, wodurch die die Entwicklung des Entity Matchers motiviert wurde.
+
+Zunächst wird beschrieben, welche Möglichkeiten zum Testen von Properties mit JUnit und Hamcrest es bereits gibt. Jeder dieser Ansätze hat einige Nachteile, wodurch die Entwicklung des Entity Matchers motiviert wurde.
 
 ## Naiver Ansatz zum Testen vieler Properties einer Instanz
 
@@ -78,7 +79,7 @@ Der naive Ansatz für das geschilderte Problem verwendet pro Property ein einzel
   }
 {% endhighlight %}
 
-Wie zu erwarten schlägt der Test fehl mit folgender Meldung:
+Wie zu erwarten schlägt der Test fehl mit der folgenden Meldung:
 
 
        org.junit.ComparisonFailure: lastname correct
@@ -94,15 +95,15 @@ Nachteile dieses Ansatzes:
 
 * Es ist sehr aufwändig, für jedes einzelne Property ein eigenes assert-Statement zu Schreiben.
 
-* Werden die gleichen Prüfungen in verschiedenen Test-Methoden benötigt, müssen die Statement immer kopiert werden. Es entsteht also schlecht wartbarer Code.
+* Werden die gleichen Prüfungen in verschiedenen Test-Methoden benötigt, müssen die Statements immer kopiert werden. Es entsteht also schlecht wartbarer Code.
 
 * Die Überprüfung der assert-Statements hört bei dem ersten Fehlschlag auf. So wird bei Ausführung des Beispiel-Tests nicht angezeigt, dass auch das Alter der Person nicht korrekt ist.
 
 
 ## Verwendung der JUnit ErrorCollector-Rule
 
-In diesem Ansatz verwenden wir nicht einzelne assertEquals-Statements, sondern den ErrorCollector aus dem JUnit Framework. Dazu muss in der Testklasse eine Instanz der Klasse
-org.junit.ErrorCollector angelegt und mit der Annotation @Rule versehen werden:
+In diesem Ansatz verwenden wir nicht einzelne assertEquals-Statements, sondern den [ErrorCollector](http://junit.org/junit4/javadoc/4.12/org/junit/rules/ErrorCollector.html "ErrorCollector (JUnit API)") aus dem JUnit Framework. Dazu muss in der Testklasse eine Instanz der Klasse
+org.junit.ErrorCollector angelegt und mit der Annotation [@Rule](http://junit.org/junit4/javadoc/4.12/org/junit/Rule.html "Rule (JUnit API)") versehen werden:
 
 {% highlight java %}
   @Rule
@@ -144,7 +145,7 @@ Leider sind zwei Probleme des ersten Ansatztes auch hier noch nicht gelöst:
 
 ## Verwendung von Hamcrest samePropertyValuesAs
 
-Durch die Verwendung des Matchers samePropertyValuesAs kommen wir schon recht Nahe an unser Ziel, einfache Assert-Statements zu schreiben:
+Durch die Verwendung des Matchers [samePropertyValuesAs](http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/beans/SamePropertyValuesAs.html "Hamcrest API") kommen wir schon recht Nahe an unser Ziel, einfache Assert-Statements zu schreiben:
 
 {% highlight java %}
   @Test
@@ -172,8 +173,10 @@ Nachteile:
 * Leider stoppt auch der samePropertyValuesAs - Matcher die Ausführung, sobald ein invalides Property gefunden wurde. Die Abweichung in dem Property lastName wurde nicht protokolliert.
 
 
-# EntityMatcher
+# Entity Matcher
 
+Der hier vorgestellte Entity Matcher erfüllt alle drei genannten Anforderungen.
+Beispiel-Aufruf:
 {% highlight java %}
 
 import static com.opitzconsulting.entitymatcher.EntityMatcher.matchesAllProperties;
@@ -187,6 +190,7 @@ public class ExampleEntityMatcher {
 
     assertThat(actual,matchesAllProperties( expected ));
   }
+}
 {% endhighlight %}
 
 Nach Ausführung des Tests werden alle Property-Abweichungen angezeigt:
@@ -197,9 +201,56 @@ Nach Ausführung des Tests werden alle Property-Abweichungen angezeigt:
       -->age		(expected:42, actual:7),
       -->lastName		(expected:Maier, actual:Mayer)]
 
+Vorteile:
+- Genau wie beim Hamcrest Matcher "samePropertyValuesAs" wir nur ein einzelnes assert-Statement benötigt.
+- Der Entity Matcher überprüft alle Properties, alle Validierungsfehler werden am Ende protokolliert.
+- Weiterhin sind mit dem Entity Matcher noch einige andere Dinge möglich, die in den folgenden Abschnitten dargestellt werden.
 
 ## Feature: Prüfe nur definierte Properties
-Define, wich properties you want to ignore
 
+Mittels der Methode _matchesSpecifiedProperties_ werden nur die Properties einer Klasse geprüft, die beim Aufruf spezifiziert werden
+
+Im folgenden Test wird zur Demontration im ersten _assertThat_-Statement validiert, dass der Nachname und das Alter gleich sind. In dem zweiten _assertThat_-Statement wird validiert, dass der Vorname nicht gleich ist.
+
+{% highlight java %}
+import static com.opitzconsulting.entitymatcher.EntityMatcher.matchesSpecifiedProperties;
+...
+@Test
+public void testMatchesSpecifiedProperties() {
+  Person actualPerson = new Person( "Duck", "Donald" )
+      .withAge(42)
+      .withEmail( "donald.duck@entenhausen.de" );
+  Person expectedPerson = new Person( "Duck", "Daisy" )
+      .withAge(42)
+      .withEmail( "Daisy.duck@entenhausen.de" );
+
+  assertThat( actualPerson,
+      matchesSpecifiedProperties( expectedPerson, "lastName", "age" ) );
+
+  assertThat( actualPerson,
+      not( matchesSpecifiedProperties( expectedPerson, "firstName" ) ));
+}
+{% endhighlight %}
 ## Feature: Prüfe alle mit Ausnahme der definierten Properties
-Match all properties excluding the named properties:
+Mittels der Methode _matchesAllPropertiesExcluding_ werden alle Properties einer Klasse mit Ausnahme der spezifizierten Properties geprüft.
+
+Im folgenden Test wird zur Demonstration validiert, dass alle Properties mit Ausnahme von Vorname und E-Mail-Adresse gleich sind:
+
+{% highlight java %}
+import static com.opitzconsulting.entitymatcher.EntityMatcher.matchesAllPropertiesExcluding;
+...
+@Test
+public void testMatchesAllPropertiesExcluding() {
+  Person actualPerson = new Person( "Duck", "Donald" ).withAge(42).withEmail(
+    "donald.duck@entenhausen.de" );
+  Person expectedPerson = new Person( "Duck", "Daisy" ).withAge(42 )
+    .withEmail( "Daisy.duck@entenhausen.de" );
+
+  assertThat( actualPerson,
+    matchesAllPropertiesExcluding( expectedPerson, "firstName", "email" ) );
+}
+{% endhighlight %}
+
+# Download des Entity-Matchers
+
+Der Entity-Matcher ist auf Github verfügbar: [entity-matcher](https://github.com/stefanlack/entity-matcher)
