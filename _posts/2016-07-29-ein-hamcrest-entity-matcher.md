@@ -61,7 +61,8 @@ public class Person {
 
 # Motivation
 
-Zunächst wird beschrieben, welche Möglichkeiten zum Testen von Properties mit JUnit und Hamcrest es bereits gibt. Jeder dieser Ansätze hat einige Nachteile, wodurch die Entwicklung des Entity Matchers motiviert wurde.
+Es gibt schon einige Möglichkeiten zum Testen von Properties mit Junit und Hamcrest. Allerdings hat jeder dieser Ansätze Nachteile für unser Einsatzszenario, die wir uns einmal anschauen.
+Daher haben wir einen neuen Entity Manager entwickelt.
 
 ## Naiver Ansatz zum Testen vieler Properties einer Instanz
 
@@ -253,4 +254,4 @@ public void testMatchesAllPropertiesExcluding() {
 
 # Download des Entity-Matchers
 
-Der Entity-Matcher ist auf Github verfügbar: [entity-matcher](https://github.com/stefanlack/entity-matcher)
+Der Entity-Matcher ist auf Github verfügbar: [entity-matcher](https://github.com/opitzconsulting/entity-matcher)
