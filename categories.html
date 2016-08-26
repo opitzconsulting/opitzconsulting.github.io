@@ -5,9 +5,9 @@ permalink: /categories/
 ---
 
 <p>Hier finden Sie alle Themengebiete über die wir in diesem Blog schreiben:</p>
-
+{% assign topics_list = site.topics | sort: 'title' %}
 <ul class="categories-list">
-  {% for category in site.topics | sort: 'title' %}
+  {% for category in topics_list %}
     <li><a class="categories-link" href="{{ category.url | prepend: site.baseurl }}">{{ category.title }}</a></li>
   {% endfor %}
 </ul>
