@@ -7,7 +7,7 @@ Da rief mich doch gerade ein Kollege an und fragte, wie das denn geht mit Contin
 
 Also ich kann nur berichten, wie wir das im aktuellen Projekt machen.
 
-Generell benötigt man dazu ein Schemamigrationstool. Denn auch die Schemamigration muss man automatisieren.
+Generell benötigt man dazu ein Schemamigrationstool, denn auch die Schemamigration muss man automatisieren.
 Dazu eignen sich Werkzeuge, wie
 
 * [Liquibase](http://www.liquibase.org/)
@@ -15,7 +15,7 @@ Dazu eignen sich Werkzeuge, wie
 * oder wenn man Oracle Datenbanken verwaltet [Orcas](https://github.com/opitzconsulting/orcas)
 
 Natürlich kann man mit Liquibase und Flyway auch Oracle Datenbanken verwalten. Orcas kann dann aber eine bessere Wahl sein.
-Insbesondere, wenn man die unterschiedliche Philosophie von Orcas gegenüber Flyway und Liquibase vorzieht.
+Insbesondere, wenn man die [unterschiedliche Philosophie](http://opitzconsulting.github.io/orcas/docs/de/liquibase/) von Orcas gegenüber Flyway und Liquibase vorzieht.
 Aber im Folgenden abstrahieren wir vom konkreten Produkt und zeigen wie man die Schemamigration in eine Continuous Delivery Pipeline
 einbauen kann.
 
@@ -49,9 +49,3 @@ Unter diesen Randbedingungen sieht unsere Lösung in etwa wie folgt aus:
 * In einem bestimmten Schritt erzeugen wir die entsprechenden Docker Images, unter anderem dabei auch das Liquibase Image. Dazu holen wir die dbmigrations Module aus dem Maven Repository. Dieses Image beinhaltet ein Skript, welches die DB Migrations dann auch auf eine Zieldatenbank anwenden kann.
 * Es gibt einen weiteren Pipelineschritt, der Frühzeitig feststellen soll, ob die Migrations "fehlerfrei" sind in dem Sinne, dass sie nicht auf eine bestehende Datenbank angewendet werden können. Dazu holen wir das Liquibase DB Migrations Image, welches aktuell auf der UAT Umgebung deployed wurde. Dieses wenden wir auf eine "leere" Datenbank an. Anschließend wird das aktuell gebaute Liqubiase Image auf dieser Datenbank angewendet. Dies setzt voraus, dass niemand manuell Änderungen an der Datenbank durchführt. Ansonsten sollte man immer das DDL direkt aus der Zieldatenbank (UAT, Prod) erzeugen, gegen welche man testen will.
 * Das Deployment erfolgt in zwei Schritten. Die Umgebungen sind als docker-compose Dateien beschrieben. Docker Compose reicht aber alleine nicht aus, um ein erfolgreiches Deployment sicher zu stellen. Dies liegt daran, dass Docker Compose abhängige Container direkt startet, wenn die Container die als Abhängigkeit definiert sind gestartet sind. Gestartet heißt aber nicht, dass der darin enthaltene Prozess wirklich "fertig" ist. Wir lösen dies, indem wir das docker-compose File mittels eines Shell Skripts nur bis zum liquibase Container starten und warten, dass sich dieser wieder (erfolgreich) beendet. Dann wissen wir, dass die Datenbank im neuen Zustand vorhanden ist, so dass die Applikation starten kann.
-
-## Diskussion
-
-Liquibase kann auch in den Startupprozess der Anwendung integriert werden. Wir wollten aber bewusst einen Mechanismus, der separat aufrufbar ist, selbst wenn die Anwendung nicht deployed wird, sondern nur die Datenbanken (etwa in einer Datenbankmigrationsumgebung)
-
-   
