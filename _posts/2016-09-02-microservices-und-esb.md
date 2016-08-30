@@ -11,11 +11,13 @@ tags:
 "Passt ein Enterprise Service Bus in eine Microservices Architektur", das fragen sich viele, die bisher auf eine Service-orientierte Architektur gesetzt haben.
 
 ## Der Enterprise Service Bus
-Ein ESB übernimmt in einer SOA Architektur wichtige zentrale Aufgaben:
+Wird ein ESB in eine Service-Orientierten-Architektur eingesetzt, dann übernimmt er zentrale Aufgaben, wie:
 
 * Routing
 * Protokolltransformation
 * Mapping zwischen Datenstrukturen
+* Content Enrichment / Content Filtering
+* Endpunktvirtualisierung
 
 Anstatt bei dieser technischen Beschreibung zu bleiben, sollten wir überlegen, welche Architekturtreiber hinter der
 Entscheidung stehen, einen ESB zu vewenden (wir klammern einmal aus, dass nicht klar ist, was ein ESB ist).
@@ -29,20 +31,23 @@ Der Einsatz eines ESBs wird häufig mit folgenden Architekturtreibern begründet
 Dabei sollten wir nicht stehen bleiben und uns etwas weiter mit den Hintegründen beschäftigen, um zu verstehen, was mit den Schlagworten gemeint ist
 
 ### Effizienz
-Vor dem ESB hat man jeweils verschiedene Services direkt miteiander verbunden. Statt dass die jeweiligen Entwicklungsteams sich um
-Protokoll und Formatkonvertierung Gedanken machen und es implementieren, ist die Annahme, dass es effizienter ist, wenn eine Middleware und ein Middlewareteam diese Aufgabe übernimmt.
+Bevor ein ESB für die Integration von Systemen verwendet wurde, hat man häufig Punkt-zu-Punkt Verbindungen aufgebaut.
+Das Versprechen des ESBs ist ess, dass die jeweiligen Entwicklungsteams sich nicht um
+Protokoll und Formatkonvertierung Gedanken machen und es implementieren müssen, sondern dass sich diese Aufgabe ein ESB / Middlewareteam übernimmt.
 Hier kann sogar ein "Common Data Model" definiert werden, und dann braucht man ggf. nur eine neue Konvertierung vom CDM zum neuen angebundenen System implementieren.
 
 ### Manageability
-Ein ESB Produkt ist eine Middleware. Als solche ist es ein zentraler Punkt, an dem man recht einfach Richtlinien durchsetzen und kontrollieren kann, etwa bzgl. Sicherheit (Authentifizierung, Autorisierung, Auditing).
+Ein ESB Produkt ist Teil einer Middlewarelösung. Als solche ist es ein zentraler Punkt, an dem man recht einfach Richtlinien durchsetzen und kontrollieren kann, etwa bzgl. Sicherheit (Authentifizierung, Autorisierung, Auditing).
 Daher ist ein ESB ein gutes Produkt, wenn man Enterprise Architektur Vorgaben immplementieren und kontrollieren will.
 Den Auditor freut es auch häufig, wenn er sich nur ein Produkt anschauen muss, um zu verstehen, wie Sicherheitsaspekte adressiert werden.
-Der ESB ist auch die Stelle, die für das Routing der Nachrichten sorgt.
+Des Weiteren dient ein ESB als zentrale Architekturkomponente dazu, Nachrichten and verschiedene Endsysteme zu verteilen. Dabei werden Nachrichten in das jeweilige Zieldatenformat transformiert und ggf. auch um weitere Daten angereichert.
 
 ### Sicherheit (Security)
 
 Insgesamt herrscht bei den Motiven hinter einem ESB und vielleicht auch hinter einer klassischen SOA ein Top-Down bzw. zentralistischer Ansatz vor. Vorgabe eine Common Data Models, zentraler Business Regeln, die zentral durchgesetzt und
 gemonitored werden können. Sicherheit, die zentral und einheitlich gemanaged werden kann.
+
+### SOA als zentralistischer Ansatz
 SOA wird häufig als unternehmensweite Initiative eingeführt. Wenn das nicht passiert, dann werden nur Teilerfolge erzielt oder aus SOA wird einfach Enterprise Appplication Integraiton (EAI).
 Bei solchen Ansätzen spielt dann auch Enterprise Architecture eine Rolle. Wobei EA dort wiederum als zentrale Vorgabe verstanden wird.
 Effizienz wird dann auch so verstanden, dass wie bei einer arbeitsteiligen Industriefertigung eine gewisse Tätigkeit (etwa das Mapping zwischen Datenmodellen) am besten von einer Abteilung vorgenommen wird, die nichts anderes macht und es daher auch sehr effizient macht.
@@ -52,11 +57,11 @@ Das ist aber einer der Gründe für Microservices.
 
 ## Microservices
 
-Für diesen Blog Post reicht es aus Microservices als einen Service zu betrachten, der im Idealfall für eine Geschäftsfähigkeit (Business Capability) zuständig ist. Weiter gehe ich davon aus, dass grundlegende Entscheidungen für die Kommunikation von Microservices untereinander
+Da der Begriff Microservices genau so wenig präzise definiert it, wie der Begriff ESB, betrachten wir für diesen Blog Post einen Microservices als einen Service, der im Idealfall für eine Geschäftsfähigkeit (Business Capability) zuständig ist. Weiter gehe ich davon aus, dass grundlegende Entscheidungen für die Kommunikation von Microservices untereinander
 zentral festgelegt wurden, etwa REST/HTTP für synchrone Aufrufe, Messaging für asynchrone Kommunikation.
 
 Routing wird entweder druch die Messaging Middleware erledigt oder die einzelnen Services finden sich über eine Service Registry.
-In der ESB Welt wurden auch schon Themen wie Service Registries versucht zu etablieren. Aber zum einen war es nicht so nötig, da die Infrastruktur recht stabil war und zum anderen waren die Registries häufig zu kompliziert. Registries im Microservices Umfeld sind dichter dran an einem einfachen DNS Server, der ggf. dann noch Zusatzfunktionen bietet, wie Health-Checks etc.
+In der SOA Welt wurden auch schon Themen wie Service Registries versucht zu etablieren. Aber zum einen war es nicht so nötig, da die Infrastruktur recht stabil war und zum anderen waren die Registries häufig zu kompliziert (Aufwand für Pflege und Nutzen stehen in keinem guten Verhältnis). Registries im Microservices Umfeld sind dichter dran an einem einfachen DNS Server, der ggf. dann noch Zusatzfunktionen bietet, wie Health-Checks etc.
 
 Bleiben die Aspekte Sicherheit und Modelltransformation. Zunächst zur Modelltransformation. Wenn das MS Team selbst die Transformation durchführt, dann kennt es zumindest eines der Modelle und nicht wie das Middlewareteam beide nicht.
 Der Aspekt der Sicherheit wiederum ist ein querschnittliches Thema. Daher ist es sinnvoll diese Aufgaben in einem API Gateway zu bündeln.
