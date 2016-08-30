@@ -8,7 +8,7 @@ author: stefan.lack
 Der hier vorgestellte Hamcrest Matcher entstand im Rahmen eines Projektes, in dem sehr viele Java Entity Objekte auf Korrektheit ihrer Properties getestet werden mussten.
 Mit dem Matcher können mittels eines einzelnen Assert-Statement alle Properties einer Klasse auf Korrektheit geprüft werden. Dabei werden alle fehlgeschlagenen Validierungen am Ende der Prüfung in einer übersichtlichen Fehlermeldung dargestellt.
 
-# Zu Beginn ein Beispiel
+## Zu Beginn ein Beispiel
 
 {% highlight java %}
   @Test
@@ -28,7 +28,7 @@ Nach Ausführung des Tests werden alle Property-Abweichungen angezeigt:
       -->age		(expected:42, actual:7),
       -->lastName		(expected:Maier, actual:Mayer)]
 
-# Setup
+## Setup
 
 Zur Demonstration des Matchers wird die Klasse Person verwendet:
 
@@ -59,13 +59,12 @@ public class Person {
 }
 {% endhighlight %}
 
-# Motivation
+## Motivation
 
 Es gibt schon einige Möglichkeiten zum Testen von Properties mit Junit und Hamcrest. Allerdings hat jeder dieser Ansätze Nachteile für unser Einsatzszenario, die wir uns einmal anschauen.
 Daher haben wir einen neuen Entity Manager entwickelt.
 
-## Naiver Ansatz zum Testen vieler Properties einer Instanz
-
+### Naiver Ansatz zum Testen vieler Properties einer Instanz
 
 Der naive Ansatz für das geschilderte Problem verwendet pro Property ein einzelnes JUnit assertEquals-Statement:
 {% highlight java %}
@@ -100,11 +99,10 @@ Nachteile dieses Ansatzes:
 
 * Die Überprüfung der assert-Statements hört bei dem ersten Fehlschlag auf. So wird bei Ausführung des Beispiel-Tests nicht angezeigt, dass auch das Alter der Person nicht korrekt ist.
 
-
-## Verwendung der JUnit ErrorCollector-Rule
+### Verwendung der JUnit ErrorCollector-Rule
 
 In diesem Ansatz verwenden wir nicht einzelne assertEquals-Statements, sondern den [ErrorCollector](http://junit.org/junit4/javadoc/4.12/org/junit/rules/ErrorCollector.html "ErrorCollector (JUnit API)") aus dem JUnit Framework. Dazu muss in der Testklasse eine Instanz der Klasse
-org.junit.ErrorCollector angelegt und mit der Annotation [@Rule](http://junit.org/junit4/javadoc/4.12/org/junit/Rule.html "Rule (JUnit API)") versehen werden:
+`org.junit.ErrorCollector` angelegt und mit der Annotation [@Rule](http://junit.org/junit4/javadoc/4.12/org/junit/Rule.html "Rule (JUnit API)") versehen werden:
 
 {% highlight java %}
   @Rule
@@ -143,8 +141,7 @@ Leider sind zwei Probleme des ersten Ansatztes auch hier noch nicht gelöst:
 
 * Die Wartbarkeit ist immer noch nicht gut.
 
-
-## Verwendung von Hamcrest samePropertyValuesAs
+### Verwendung von Hamcrest samePropertyValuesAs
 
 Durch die Verwendung des Matchers [samePropertyValuesAs](http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/beans/SamePropertyValuesAs.html "Hamcrest API") kommen wir schon recht Nahe an unser Ziel, einfache Assert-Statements zu schreiben:
 
@@ -173,8 +170,7 @@ Nachteile:
 
 * Leider stoppt auch der samePropertyValuesAs - Matcher die Ausführung, sobald ein invalides Property gefunden wurde. Die Abweichung in dem Property lastName wurde nicht protokolliert.
 
-
-# Entity Matcher
+## Entity Matcher
 
 Der hier vorgestellte Entity Matcher erfüllt alle drei genannten Anforderungen.
 Beispiel-Aufruf:
@@ -232,7 +228,9 @@ public void testMatchesSpecifiedProperties() {
       not( matchesSpecifiedProperties( expectedPerson, "firstName" ) ));
 }
 {% endhighlight %}
+
 ## Feature: Prüfe alle mit Ausnahme der definierten Properties
+
 Mittels der Methode _matchesAllPropertiesExcluding_ werden alle Properties einer Klasse mit Ausnahme der spezifizierten Properties geprüft.
 
 Im folgenden Test wird zur Demonstration validiert, dass alle Properties mit Ausnahme von Vorname und E-Mail-Adresse gleich sind:
@@ -252,6 +250,6 @@ public void testMatchesAllPropertiesExcluding() {
 }
 {% endhighlight %}
 
-# Download des Entity-Matchers
+## Download des Entity-Matchers
 
 Der Entity-Matcher ist auf Github verfügbar: [entity-matcher](https://github.com/opitzconsulting/entity-matcher)
