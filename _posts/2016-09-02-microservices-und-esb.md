@@ -111,3 +111,7 @@ Was wir bisher nicht betrachtet haben sind die organisatorischen Voraussetzung, 
 Die alte Organisationsstruktur ist natürlich auch mit Köpfen verknüpft; Organisationen und Menschen sind aber eine träge Masse.
 Dies mag auch einer der Gründe sein, dass Unternehmen eigene Gesellschaften gründen, in denen sie ihre Aktivitäten rund um Digitalisierung bündeln. Diese Gesellschaften haben aber immer noch Integrationspunkte mit dem Mutterunternehmen, aber ihre ganze Aufbauorganisation ist auf die Herausforderungen der Digitalisierung ausgerichtet. Agilität, DevOps und Prinzipien von Management 3.0 sind in diesen Organisationen natürlicher Bestandteil ihrer DNA.
 Viel wichtiger wäre es aber direkt mit einem Kultur- und damit Organisationswandel zu beginnen. Silodenken ist eine Sackgasse, um in sich schnell ändernden Märkten und Umgebungen erfolgreich zu sein.
+
+
+## Dank
+Ich danke meinem Kollegen [Sven Bernhardt](https://svenbernhardt.wordpress.com/) für wertvolle Kommentare zu einer frühen Version dieses Artikels.
