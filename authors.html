@@ -5,9 +5,9 @@ permalink: /authors/
 ---
 
 <p>Auf dieser Seite möchten wir Ihnen unsere in diesem Blog aktiven Mitarbeiter und Autoren vorstellen:</p>
-
+{% assign authors_list = site.authors | sort: 'title' %}
 <ul class="authors-list">
-  {% for author in site.authors | sort: 'title' %}
+  {% for author in authors_list %}
     <li><a class="authors-link" href="{{ author.url | prepend: site.baseurl }}">{{ author.title }}</a></li>
   {% endfor %}
 </ul>
