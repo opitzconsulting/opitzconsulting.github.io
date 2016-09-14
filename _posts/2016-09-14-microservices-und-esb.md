@@ -105,6 +105,7 @@ Konkret kann das etwa wie unten dargestellt aussehen. Hier ruft ein API Gateway 
 auf dem ESB auf, der von SAP implementiert wird. So ist dies aktuell bei einem
 Kunden eines Kollegen implementiert.
 ![API GW spricht mit ESB](/img/posts/2016-09-14/api_gw_esb_beispiel.jpg)
+
 In diesem Fall wird eine Bestellung über das API Gateway aufgegeben.
 
 ## Wieder vereint: ESB und Microservices?
