@@ -7,15 +7,16 @@ layout: default
 {% unless page.content == '' %}
   <p>{{ page.content }}</p>
 {% endunless %}
-
 <ul class="post-list">
-  {% for post in site.categories.page.category %}
-  <li>
-    <span class="post-meta">{% include date.html date=post.date %}</span>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <p>{{ post.excerpt | strip_html }}</p>
-  </li>
+  {% for post in site.posts %}
+    {% if post.categories contains page.category %}
+    <li>
+      <span class="post-meta">{% include date.html date=post.date %}</span>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <p>{{ post.excerpt | strip_html }}</p>
+    </li>
+    {% endif %}
   {% endfor %}
 </ul>

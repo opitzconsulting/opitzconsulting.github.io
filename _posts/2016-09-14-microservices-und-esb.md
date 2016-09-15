@@ -2,9 +2,10 @@
 title: "Microservices Architektur und ESB: Unvereinbar?"
 author: richard.attermeyer
 categories:
-  - Flexible Architekturen
+  - architektur
 tags:
   - Microservices
+  - Flexible Architekturen
   - SOA
   - Integration
 ---

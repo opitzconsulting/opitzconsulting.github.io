@@ -1,7 +1,7 @@
 ---
 title:  "Continuous Delivery von Datenbankänderungen"
-categories: 
-  - continuous delivery
+categories:
+  - "continuous delivery"
 author: richard.attermeyer
 ---
 Da rief mich doch gerade ein Kollege an und fragte, wie das denn geht mit Continuous Delivery und Datenbankänderungen.
