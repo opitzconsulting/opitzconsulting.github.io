@@ -39,6 +39,8 @@ ul, ol, dl, figure,
  */
 img {
     max-width: 100%;
+    display: block;
+    margin: auto;
     vertical-align: middle;
 }
 
@@ -91,6 +93,10 @@ a {
     }
 }
 
+strong, b {
+  font-weight: 700;
+}
+
 /**
  * Blockquotes
  */
@@ -120,6 +126,10 @@ code {
 
 code {
     padding: 1px 5px;
+}
+
+p {
+  text-align: justify;
 }
 
 pre {
