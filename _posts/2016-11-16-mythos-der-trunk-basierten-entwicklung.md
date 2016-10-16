@@ -62,12 +62,12 @@ Wir stellen daher fest, dass wir die unabhängigen Releasezyklen gar nicht benö
 Zu diesem Zeitpunkt ist die Laufzeit der Buildpipeline kein Problem.
 Was haben daher alle Fachmodule (die jeweils ein Multi-Module Maven Projekt waren) noch einmal unter einem gemeinsamen Oberprojekt zusammen zu fassen.
 Und diese Multi-Multi-Modul-Projekt dann zusammen zu bauen. Damit haben wir das große Stau verursachende Problem der händischen Versionsnummernaktualisierung gelöst.
-Gleichzeitig müssen wir in Jenkins nicht mehr 7 Buildprojekte managemen, sondern nur noch eins. Wir haben eine Menge Komplexität reduziert, die uns eher behindert
+Gleichzeitig müssen wir in Jenkins nicht mehr 7 Buildprojekte managen, sondern nur noch eins. Wir haben eine Menge Komplexität reduziert, die uns eher behindert
 als geholfen hat. Gleichzeitig haben wir keine der Architekturvorteile der Modulseparierung aufgegeben.
 Das haben wir doch gut gemacht, oder?
 Es gab immer noch ein großes Problem, welches sich immer gegen Ende des Sprints zeigte: Auf die Frage des Product Owners, ob wir eine Story im Review
 zeigen konnten, gab es häufig die Antwort "Muss nur noch gemerged werden". Und das hieß leider viel zu oft: "... also nein", denn ein Story Branch in einem aktiven Projekt
-entfernt sich sehr schnell so weit vom Trunk, dass die Reintegration häufig ein großes Abenteur ist.
+entfernt sich sehr schnell so weit vom Trunk, dass die Reintegration häufig ein großes Abenteuer ist.
 
 # Trunk basierte Entwicklung
 
@@ -76,10 +76,10 @@ auf trunk-basierte Entwicklung umstellen soll. Wenn eine Story nicht fertig wird
 Sie muss eh vollständig implementiert werden. Wenn sie nicht in diesem Sprint fertig wird, dann wird sie im nächsten Sprint auf jeden Fall weiterentwickelt.
 Also verordnet er dieses Experiment. Es ist also nicht unbedingt so, dass die Teams dem Mann mit der Sandale freiwillig gefolgt wären.
 
-Es ist ja nicht so, dass die Literatur nicht voll ist mit Ratschlägen zu dieser Art der Enwicklung.
+Es ist ja nicht so, dass die Literatur nicht voll ist mit Ratschlägen zu dieser Art der Entwicklung.
 "(Mainline development) is an extremely effective way of developing, and the only one which enables you to perform continuous integration.", sagen schon Jez Humble und David Farley
 in ihrem Buch "Continuous Delivery".
-Schafften wir es jetzt endlich unsere PS auf die Straße zu bekommen? Leider nein. Aber soche Autoren können sich doch nicht irren, oder?
+Schafften wir es jetzt endlich unsere PS auf die Straße zu bekommen? Leider nein. Aber solche Autoren können sich doch nicht irren, oder?
 Was machen wir falsch, warum standen Buchstäblich im Jenkins alle Ampeln auf rot?
 Ach ja, wir haben uns nicht ganz an den Prozess gehalten.
 Im Continuous Delivery Buch steht nämlich auch noch gleich ein einfacher Prozess geschildert:
@@ -136,7 +136,7 @@ So ein Review Tool hat in der Regel auch folgende Funktionalität eingebaut:
 * Build / Test
 
 Um zu zeigen, dass der Code sich sauber integrieren lässt und mindestens eine gewisse Menge an Tests erfüllt.
-Daneben erfolgen mit diesen Tools pre-commit reviews.
+Daneben erfolgen mit diesen Tools pre-commit Reviews.
 
 Was bedeutet das aber jetzt für unser Projekt?
 Die Ausgangssituation stellt sich zu diesem Zeitpunkt wie folgt dar: Wir betreiben TBD wie anfänglich beschrieben.
@@ -212,7 +212,7 @@ Was sind nun unsere Erkenntnisse aus der Reise
 Unsere Erfahrungen mit den Pre-Tested Commits kurz zusammengefasst
 
 * Jeder Push triggert einen Build: Dies bedeutet, wir haben einen erhöhten Ressourcenbedarf aber auch eine Zuordnung Fehler zu Push
-* Gegen Sprintenede sollte der Master Flow gegenüber Branch Flows priorisiert werden: Es laufen besonders viele Pre-Flows mit denen der Master um Ressourcen konkurriert.
+* Gegen Sprintende sollte der Master Flow gegenüber Branch Flows priorisiert werden: Es laufen besonders viele Pre-Flows mit denen der Master um Ressourcen konkurriert.
 * Cloudansatz für Infrastruktur wäre sinnvoll. Entwicklung in Sprints führt dazu, dass vor Sprintende mehr gepushed wird.
 
 Und die wichtigste Erkenntnis: Kenne deine Anforderungen und entscheide dann über den Workflow.
