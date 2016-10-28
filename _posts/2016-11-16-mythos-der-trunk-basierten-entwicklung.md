@@ -1,6 +1,8 @@
 ---
-title: "Mythos der Trunk-basierten Entwicklung"
-author: richard.attermeyer
+title: "Mythos der Trunk-basierten Entwicklung (Vortragstext)"
+author:
+  - richard.attermeyer
+  - jens.kanschik
 categories:
   - Continuous Delivery
 tags:
@@ -9,8 +11,8 @@ tags:
   - Softwareentwicklung
   - git
 ---
-Dieser Blogartikel ist als Begleitmaterial zum gleichnamigen Vortrag
-auf der Continuous Lifecycle 2016 gedacht.
+Dieser Blogartikel ist als Begleitmaterial zum gleichnamigen [Vortrag](http://de.slideshare.net/opitzconsulting)
+auf der [Continuous Lifecycle 2016](http://www.continuouslifecycle.de/veranstaltung-5382-der-mythos-der-trunk-basierten-entwicklung-%5Bsponsored-talk%5D.html?id=5382) gedacht.
 
 Wir wollen Sie in diesem Blog daher auf eine Reise mitnehmen und von unseren
 Erfahrungen mit verschiedenen Code Commit Workflows berichten.
@@ -169,6 +171,8 @@ Die Lösung, für die wir uns entschieden haben und die vom Jenkins unterstützt
 * CD System führt für jeden Commit eine Pipeline aus
 * Workflow: Rebase, Tests, Merge in Trunk
 
+![Branches](/img/posts/2016-11-16/branches.png)
+
 Auch wenn dies der Standard ist, erlauben wir weiterhin, dass jeder Entwickler auch direkt in den Trunk committet.
 Dies ist hilfreich, um schnell Änderungen an alle Teams / Branches zu verteilen oder um den Trunk schnell wieder "grün" zu bekommen,
 also Fehler auf dem Trunk zu beheben.
@@ -186,6 +190,8 @@ Geskriptet, passiert dabei ein Rebase. Je nach Ergebnis gibt es dann verschieden
 * Rebase erfolgreich, es gab keine zu mergenden Änderungen: Starte den Pre-Commit-Flow mit der Commit-Id
 
 Der zweite schritt startet keine Pipeline, da durch den Push der Codeänderungen der Gitlab Webhook wieder triggerd und dann 2 Pipelines mit den gleichen Änderungen ausgelöst würden.
+![Branches](/img/posts/2016-11-16/rebase.png)
+
 
 ## Pre-Flow
 Mittels eine Config Files, welches mit dem Source Code versioniert wird und den Namen des Branches trägt, können verschiedene Aspekte des Pre-Flows konfiguriert werden.

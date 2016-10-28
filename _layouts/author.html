@@ -61,10 +61,12 @@ layout: default
 <ul>
 {% assign post_available = false %}
 {% for post in site.posts %}
-  {% if post.author == page.username %}
-    {% assign post_available = true %}
-    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> {% include date.html date=post.date %}</li>
-  {% endif %}
+  {% for pauthor in post.author %}
+    {% if pauthor == page.username %}
+      {% assign post_available = true %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> {% include date.html date=post.date %}</li>
+      {% endif %}
+  {% endfor %}
 {% endfor %}
 
 {% if post_available == false %}
