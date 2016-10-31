@@ -127,7 +127,7 @@ Er schreibt nämlich nicht, dass dies auf dem eigenen Rechner erfolgen muss. Er 
 
 Paul Hammant beschreibt auch nochmal Googles Workflow:
 
-* One singe repo
+* One single repo
 * Mondrian / Gerrit
 * Extensive Tooling
 
@@ -151,7 +151,7 @@ Und das hat zur Folge:
 * Umbauten in der GUI, aber auch im Backend sorgen dafür, dass zum Teil mehrere Tage der Build fehlschlägt
 * Als Lösung nutzen Teams Branches, allerdings ohne jegliche CI Unterstützung
 
-Dies ist ein guter Zeitpunkt uns nochmal die Anforderungen alle anzuschauen, die wir an einen CI Prozess haben:
+Dies ist ein guter Zeitpunkt uns nochmal alle Anforderungen anzuschauen, die wir an einen CI Prozess haben:
 
 * Bei Abhängigkeiten zwischen den Teams müssen auch Zwischenstände einer Story für andere Teams verfügbar sein
 * Fehler in den Builds bzw. Behebung der Fehler sollen möglichst schnell sichtbar sein
@@ -194,7 +194,7 @@ Der zweite schritt startet keine Pipeline, da durch den Push der Codeänderungen
 
 
 ## Pre-Flow
-Mittels eine Config Files, welches mit dem Source Code versioniert wird und den Namen des Branches trägt, können verschiedene Aspekte des Pre-Flows konfiguriert werden.
+Mittels eines Config Files, welches mit dem Source Code versioniert wird und den Namen des Branches trägt, können verschiedene Aspekte des Pre-Flows konfiguriert werden.
 Ein wichtiger Aspekt ist es die auszuführenden E2E Testsuiten zu konfigurieren.
 Man kann dafür sorgen, dass im Pre-Flow nur ein Teil der Testuiten läuft. Dies ermöglicht es Ressourcenbedarf, Feedbackzeiten und höheres Risiko (das der Trunk Build fehlschlägt)
 gegeneinander abzuwägen. Im Trunk laufen aber immer alle Tests.
