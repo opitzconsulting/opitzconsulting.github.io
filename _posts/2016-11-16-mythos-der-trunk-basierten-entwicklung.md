@@ -159,7 +159,7 @@ Dies ist ein guter Zeitpunkt uns nochmal alle Anforderungen anzuschauen, die wir
 * Fehlgeschlagene Builds sollten mit Commits im Zusammenhang stehen
 * Größere Änderungen dürfen nicht dazu führen, dass andere Ergebnisse nicht ausgeliefert werden können.
 * Bei bestimmten Arten von Stories sollten keine Zwischenergebnisse deployed werden, sondern erst der fertige Stand.
-* Umfangreiche Merges sind zeitaufwändig zu vermeiden (Regelmäßige, kleine Merges sind in der Regel kein Problem)
+* Umfangreiche Merges sind zeitaufwändig und zu vermeiden (Regelmäßige, kleine Merges sind in der Regel kein Problem)
 * Auch halbfertiger Code soll eingecheckt werden können, z.B. am Feierabend oder um mit Kollegen an einem Problem zu arbeiten.
 
 ## Pre-Tested Commit Workflow
