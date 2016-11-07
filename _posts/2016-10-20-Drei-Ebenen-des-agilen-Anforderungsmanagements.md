@@ -3,19 +3,21 @@ title: "Die 3 Ebenen des agilen Anforderungsmanagements"
 categories: agilitaet
 author: daniel.strauch
 ---
-In einem Projekt mit klassischen Ansätzen ein Vorgehen nach agilen Maßstäben zu etabilieren, bringt mich als Scrum Master in die Rolle des Coach für den Product Owner: wie können nun die Anforderungen zergliedert, gemanaged und priorisiert werden?
+Wie können Anforderungen zergliedert, gemanaged und priorisiert werden? Das ist eine wichtige Frage, besonders wenn man in einem Projekt mit klassischen Ansätzen ein Vorgehen nach agilen Maßstäben etablieren will. Als Scrum Master werde ich Coach des Product Owners.
 
 Das Arbeiten mit agilen Ansätzen unterscheidet sich doch sehr vom klassichen / wasserfallgetrieben Vorgehen mit "vollständig ausformulierten" Spezifikationen. An diesem Punkt anzusetzen, war das Wichtigste, denn eine zentrale Frage war, was der Product Owner mit seinem schon vor langem erstellten Lastenheft tun soll.
 
-Wegwerfen, ignorieren und von vorne Beginnen Anforderungen in Form von Epics und User Stories erstellen? Wohl eher nicht, aber das war zumindest die Befürchtung des Product Owners, nach dem ich ihm in einem schnellen Durchlauf die Grundzüge von Scrum, Impact Mapping, Story Mapping und das Konzept der User Stories vorstellte. Zum Verständis, was zu tun ist und wie das Ziel eines priorisierten Backlogs unter Nebenbedingungen erreicht werden kann, trug das Modell der 3 Ebenen des agilen Anforderungsmanagements bei.
+Wegwerfen, ignorieren und von vorne beginnen Anforderungen in Form von Epics und User Stories zu erstellen? Wohl eher nicht, aber das war zumindest die Befürchtung des Product Owners, nach dem ich ihm in einem schnellen Durchlauf die Grundzüge von Scrum, Impact Mapping, Story Mapping und das Konzept der User Stories vorstellte. Zum Verständis, was zu tun ist und wie das Ziel eines priorisierten Backlogs unter Nebenbedingungen erreicht werden kann, trug das Modell der 3 Ebenen des agilen Anforderungsmanagements bei.
 
 # Die 3 Ebenen des agilen Anforderungsmanagements
 
-Das Ziel ein priorisiertes Backlog zu erstellen, lässt sich in einer Anforderungspyramide ausdrücken: während von unten die groben Anforderungsüberschriften (Epics, Themen) nachgeschoben und mit der Zeit näher erläutert werden, ist es am Scrum Team die detaillierte *Spitze* (User Stories, Tasks) abzutragen. Das Modell stellt gleichermaßen ein Prozess wie auch ein Vorgehen dar. Im ersten Moment kommt dabei einem vielleicht Kanban in den Sinn, aber wie es sich zeigte, änderten sich im Projektverlauf die Anforderungen des Product Owners, so dass das vormals mit viel Mühe erstellte Lastenheft in seiner Aktualität gegenüber der sich nun entwickelnden Vision allmählich verblasste. Und wie es sich zeigte wurde das nicht mit Tränen und Wehmut quittiert - der Weg für ein visionäres Vorgehen mit Scrum war nun endlich frei geworden.
+Das Ziel ein sauber priorisiertes Backlog, bei dem es nicht nur Prio 1 gibt, zu erstellen, lässt sich in einer Anforderungspyramide ausdrücken: während von unten die groben Anforderungsüberschriften (Epics, Themen) nachgeschoben und mit der Zeit näher erläutert werden, ist es am Scrum Team die detaillierte *Spitze* (User Stories, Tasks) abzutragen. Das Modell stellt gleichermaßen ein Prozess wie auch ein Vorgehen dar. Im ersten Moment kommt dabei einem vielleicht Kanban in den Sinn, aber wie es sich zeigte, änderten sich im Projektverlauf die Anforderungen des Product Owners, so dass das vormals mit viel Mühe erstellte Lastenheft in seiner Aktualität gegenüber der sich nun entwickelnden Vision allmählich verblasste. Und wie es sich zeigte wurde das nicht mit Tränen und Wehmut quittiert - der Weg für ein visionäres Vorgehen mit Scrum war nun endlich frei geworden.
 
 ![Die 3 Ebenen des agilen Anforderungsmanagements](/img/posts/2016-11-04/001.gif)
 
-Die einzelnen Ebenen des agilen Anforderungsmanagements sind in der Form eines priorisierten Produkt Backlogs (von oben nach unten) zu verstehen.
+Die drei Ebenen stehen in gewissem zeitlichen Zusammenhang. Aus einer Top-Down-Sicht sind die Dinge, denen man sich jetzt widmet, ausführlich und SMART genug beschrieben. Je weiter man in die Zukunft blickt, desto eher lässt man Unschärfen zu, sollte aber den INVEST+E nicht aus dem Fokus verlieren. Wird es Visionär, hilft es die Hintergründe mit einem DEEP+ER Ansatz zusammenzuhalten. Jede Ebene für sich, unterstützt das agile Anforderungsmanagement in der Weise, dass Änderungen möglich sind und nicht zu teuer werden. In dieser Betrachtung hilft DIVE den Fokus auf das Wertvolle und Nutzenstiftende zu behalten.
+
+Die einzelnen Ebenen des agilen Anforderungsmanagements sind in der Form eines gereihten Produkt Backlogs (von oben nach unten) zu verstehen.
 
 ##DIVE into
 Über allen drei Ebenen schwebt das Akronym DIVE. Es verfolgt das Ziel einer linearen Ordnung der Produkt Backlog Einträge.
@@ -36,7 +38,7 @@ In der gesamten Tiefe (vertikal) des Product Backlogs sollte D E E P + E R angew
 * **E** stimated
     * Nach Möglichkeit sollten die Product Backlog Einträge in Bezug auf ihre Komplexität geschätzt vorliegen. Ganz neue Backlogeinträge haben zumeist noch keine Schätzung und finden sich im unteren Teil des Backlogs - weit entfernt von einer nahenden Realisierung.
 * **E** mergent
-    * Insbesondere Scrum baut auf den Ansatz "Inspect and Adapt". Feedback vom Nutzer kann dazu führen, dass Backlogeinträge an anderen vorbei nach oben geschoben werden, da sich ihr erwarteter Nutzen / Geschäftswert erhöht hat. Das Prouct Backlog ist niemals statisch und befindet sich fortlaufend in einer Umgestaltung.
+    * Insbesondere Scrum baut auf den Ansatz "Inspect and Adapt". Feedback vom Nutzer kann dazu führen, dass Backlogeinträge an anderen vorbei nach oben geschoben werden, da sich ihr erwarteter Nutzen / Geschäftswert erhöht hat. Das Product Backlog ist niemals statisch und befindet sich fortlaufend in einer Umgestaltung.
 * **P** rioritized
     * Das Backlog sollte zu jedem Zeitpunkt priorisiert vorliegen. Die aktuell wichtigsten und klarsten Einträge finden sich an der Spitze, die neuen und aktuell nicht so wichtigen Einträge finden sich im unteren Bereich.
 * **E** rosive
