@@ -31,7 +31,7 @@ github_username: opitzconsulting
 youtube_username: OPITZCONSULTING
 
 # Google Analytics
-google_analytics_code:
+google_analytics_code: UA-86969716-1
 
 # Markdown
 markdown: kramdown
