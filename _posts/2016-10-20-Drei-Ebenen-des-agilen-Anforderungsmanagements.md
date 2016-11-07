@@ -15,7 +15,7 @@ Das Ziel ein sauber priorisiertes Backlog, bei dem es nicht nur Prio 1 gibt, zu 
 
 ![Die 3 Ebenen des agilen Anforderungsmanagements](/img/posts/2016-11-04/001.gif)
 
-Die drei Ebenen stehen in gewissem zeitlichen Zusammenhang. Aus einer Top-Down-Sicht sind die Dinge, denen man sich jetzt widmet, ausführlich und SMART genug beschrieben. Je weiter man in die Zukunft blickt, desto eher lässt man Unschärfen zu, sollte aber den INVEST+E nicht aus dem Fokus verlieren. Wird es Visionär, hilft es die Hintergründe mit einem DEEP+ER Ansatz zusammenzuhalten. Jede Ebene für sich, unterstütz das agile Anforderungsmanagement in der Weise, dass Änderungen möglich sind und nicht zu teuer werden. In dieser Betrachtung hilft DIVE den Fokus auf das Wertvolle und Nutzenstiftende zu behalten.
+Die drei Ebenen stehen in gewissem zeitlichen Zusammenhang. Aus einer Top-Down-Sicht sind die Dinge, denen man sich jetzt widmet, ausführlich und SMART genug beschrieben. Je weiter man in die Zukunft blickt, desto eher lässt man Unschärfen zu, sollte aber den INVEST+E nicht aus dem Fokus verlieren. Wird es Visionär, hilft es die Hintergründe mit einem DEEP+ER Ansatz zusammenzuhalten. Jede Ebene für sich, unterstützt das agile Anforderungsmanagement in der Weise, dass Änderungen möglich sind und nicht zu teuer werden. In dieser Betrachtung hilft DIVE den Fokus auf das Wertvolle und Nutzenstiftende zu behalten.
 
 Die einzelnen Ebenen des agilen Anforderungsmanagements sind in der Form eines gereihten Produkt Backlogs (von oben nach unten) zu verstehen.
 
