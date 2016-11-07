@@ -19,8 +19,9 @@ Die drei Ebenen stehen in gewissem zeitlichen Zusammenhang. Aus einer Top-Down-S
 
 Die einzelnen Ebenen des agilen Anforderungsmanagements sind in der Form eines gereihten Produkt Backlogs (von oben nach unten) zu verstehen.
 
-##DIVE into
+## DIVE into
 Über allen drei Ebenen schwebt das Akronym DIVE. Es verfolgt das Ziel einer linearen Ordnung der Produkt Backlog Einträge.
+
 * **D** ependencies
     * Selbst wenn die Abhänigkeit aller Epics und Stories weitgehend verringert ist, können dennoch einige Abhängigkeiten übrig bleiben. Diese Abhängigkeiten sollten bei der Priorisierung im Backlog antizipiert werden. Hängt beispielsweise ein Backlogeintrag A von B ab, so sollte B vor A berücksichtigt und höher priorisiert werden.
 * **I** nsure against Risks
@@ -30,9 +31,10 @@ Die einzelnen Ebenen des agilen Anforderungsmanagements sind in der Form eines g
 * Estimated **E** ffort
     * Der geschätzte Aufwand für die Realisierung sollte nicht unberücksichtigt bleiben. Zusammen mit dem Geschäftswert kann eine Aussage zum Return on Invest (ROI) getroffen werden, was eine beliebte Kennzahl bei Geschäftsführern ist.
 
-##DEEPER Product Backlog
+## DEEPER Product Backlog
 
 In der gesamten Tiefe (vertikal) des Product Backlogs sollte D E E P + E R angewandt werden.
+
 * **D** etailed appropriately
     * Gerade im unteren Bereich der Anforderungspyramide, dem Bereich der vagen noch relativ unkonkreten Backlogeinträge, spielen Details noch keine große Rolle. Je näher jedoch eine Realisierung für ein Backlogeintrag bevorsteht, desto detaillierter und exakter sollten die notwendigen Informationen sein, ohne jedoch sich in ihnen zu verlieren.  
 * **E** stimated
@@ -42,31 +44,31 @@ In der gesamten Tiefe (vertikal) des Product Backlogs sollte D E E P + E R angew
 * **P** rioritized
     * Das Backlog sollte zu jedem Zeitpunkt priorisiert vorliegen. Die aktuell wichtigsten und klarsten Einträge finden sich an der Spitze, die neuen und aktuell nicht so wichtigen Einträge finden sich im unteren Bereich.
 * **E** rosive
-    * Idealerweise hat das Backlog einen Bezug zu einer Vision und drückt in seiner Gesamtheit alle Aspekte dieser Vision aus. Jeder Aspekt im Backlog sollte einen Teil der Vision bis zur Realisierung (ab)tragen. 
+    * Idealerweise hat das Backlog einen Bezug zu einer Vision und drückt in seiner Gesamtheit alle Aspekte dieser Vision aus. Jeder Aspekt im Backlog sollte einen Teil der Vision bis zur Realisierung (ab)tragen.
 * **R** eturn on Invest
-    * Dem Aufwand einer Realisierung sollte auch immer ein angemessener Ertrag gegenüber stehen. Es ist nicht zwingend, dass dieser Ertrag in Form eines Geldbetrages ausgedrückt wird. Ebenfalls ist denkbar ein Value anzusetzen (Value on Invest - VoI). 
+    * Dem Aufwand einer Realisierung sollte auch immer ein angemessener Ertrag gegenüber stehen. Es ist nicht zwingend, dass dieser Ertrag in Form eines Geldbetrages ausgedrückt wird. Ebenfalls ist denkbar ein Value anzusetzen (Value on Invest - VoI).
 
-##INVEST+E in das Sprint Backlog
+## INVEST+E in das Sprint Backlog
 
 Umso mehr sich Epics in User Stories untergliedern, die auf sie einzahlen, und sich damit für eine Realisierung in einem Sprint anbieten, desto stärker sollte auf INVEST+E geachtet werden.
 
 * **I** ndependent
     * Damit einzelne User Stories überhaupt in einen Sprint genommen und somit die Realisierung abgegrenzt werden kann, sollten sie möglichst unabhängig von anderen User Stories sein. Ist das nicht möglich, orientiere dich an DIVE.
 * **N** egotiable
-    * Über die Realisierung einer User Story in einem Sprint sollte verhandelt werden können. Insbesondere dann, wenn es zu einer Situation 
+    * Über die Realisierung einer User Story in einem Sprint sollte verhandelt werden können. Insbesondere dann, wenn es zu einer Situation
 * **V** aluable
     * Die Umsetzung einer User Story sollte einen (Mehr-) Wert liefern - vermeide Überflüssiges und orientiere dich am Minimum Viable Product
 * **E** stimable
-    * Kann über eine User Story keine hinreichende Schätzung zu ihrer Komplexität abgegeben werden, dann ist sie möglicherweise zu komplex. Es bietet sich an, die Anforderung kleiner zu schneiden und die Komplexität dann erneut zu schätzen. 
+    * Kann über eine User Story keine hinreichende Schätzung zu ihrer Komplexität abgegeben werden, dann ist sie möglicherweise zu komplex. Es bietet sich an, die Anforderung kleiner zu schneiden und die Komplexität dann erneut zu schätzen.
 * **S** mall
     * Die Anforderung sollte klein genug sein, so dass sie in einer Sprintlänge realisiert werden kann und danach potentiell einsetzbar ist.
 * **T** estable
-    * Die Formulierte Ergebniserwartung sollte testbar sein. Kann das Ergebnis nicht getestet werden, sollte über ein anderes 
+    * Die Formulierte Ergebniserwartung sollte testbar sein. Kann das Ergebnis nicht getestet werden, sollte über ein anderes
 * +
 * **E** xample
-    * Wenn möglich, kann mit einem vielleicht schon existierenden Analogon ein vergleichendes Beispiel benannt werden. Es kann zum besseren Verständis über das erwartete Ergebnis führen. 
+    * Wenn möglich, kann mit einem vielleicht schon existierenden Analogon ein vergleichendes Beispiel benannt werden. Es kann zum besseren Verständis über das erwartete Ergebnis führen.
 
-##SMART Tasks
+## SMART Tasks
 
 Zu guter Letzt ist es am Team zu den gewählten User Stories für einen Sprint (Selected Backlog) einzelne Tasks (Aufgaben) zu erfassen, die sich möglichst an SMART orientieren sollten.
 
