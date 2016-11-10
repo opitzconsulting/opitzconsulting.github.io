@@ -193,6 +193,7 @@ Geskriptet, passiert dabei ein Rebase. Je nach Ergebnis gibt es dann verschieden
 * Rebase erfolgreich, es gab keine zu mergenden Änderungen: Starte den Pre-Commit-Flow mit der Commit-Id
 
 Der zweite Schritt startet keine Pipeline, da durch den Push der Codeänderungen der Gitlab Webhook wieder triggerd und dann 2 Pipelines mit den gleichen Änderungen ausgelöst würden.
+
 ![Branches](/img/posts/2016-11-16/rebase.png)
 
 
