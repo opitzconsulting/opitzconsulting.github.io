@@ -42,24 +42,24 @@ Bei dieser Diskussion haben sich diejenigen durchgesetzt, die keine unfertigen S
 bis dahin entwickelten Tests weiterhin erfolgreich absolviert werden.
 Als Muster haben wir dafür die Entwicklung in Story Branches gewählt.
 
-Da jedes Fachmodul soll später in Produktion möglichst unabhängig von anderen Modulen in Produktion gebracht werden und auch skaliert werden können.
-Daher wurde jedes Fachmodul unabhängig von den anderen gebaut und als eigenständiges Projekt in Jenkins gebaut.
+Jedes Fachmodul soll später möglichst unabhängig von anderen Modulen in Produktion gebracht werden und auch skaliert werden können.
+Daher wurde jedes Fachmodul entwickelt und in Jenkins unabhängig von den anderen gebaut.
 Damit sollten wir möglichst große Freiheit haben und freie Fahrt für jedes Modul existieren.
 
 Die Realität sah aber anders aus. Zum einen gab es eine Menge Geschwindigkeitsbegrenzungen z.B. in Form von
-gemeinsamen Libraries, als ein prominentes Beispiel gibt es auch in diesem Projekt das typische "commons" Modul.
+gemeinsamen Libraries. Als ein prominentes Beispiel gibt es auch in diesem Projekt das typische "commons" Modul.
 Gleichzeitig ist es für viele Features notwendig, dass in mehreren Modulen Funktionalität entwickelt wird.
 Module sind also über ihre Schnittstellen gekoppelt. Für die Fachmodule innerhalb des Projekts wurden daher
 Clientmodule entwickelt (externe Projekte erhalten nur die REST Schnittstellenbeschreibung).
 Wir wollen hier nicht die Vor- und Nachteile von common Libraries und Client Modulen diskutieren. Jede Architekturentscheidung beinhaltet Trade-offs.
-Für uns scheinen die Vorteile zu überwiegen, da die Nutzung nur auf das eine Projekt beschränkt sind.
+Für uns scheinen die Vorteile zu überwiegen, da die Nutzung nur auf das eine Projekt beschränkt ist.
 Aus Geschwindigkeitsbegrenzungen wurde aber häufig auch ein Stau. Ein Fachmodul musste eine neue Version "releasen", d.h. es musste eine neue Version im
 Nexus Repository deployed sein, bevor diese Version dann in konsumierenden Modulen genutzt werden musste.
 Es mussten also häufig manuell Versionsnummern aktualisiert werden.
 
 Wir standen also vor der Entscheidung, wie wir weiter machen. An dieser Stelle haben wir eine Standortbestimmung vorgenommen.
 Wir hätten die Kopplung über die Common Module und Client Libraries abschaffen können, aber wie schon gesagt überwiegen für das Projekt die Vorteile.
-Gleichzeitig sind wir bei einer Neuentwicklung eines Produkts und nicht bei der Weiterentwicklung.
+Allerdings sind wir bei einer Neuentwicklung eines Produkts und nicht bei der Weiterentwicklung.
 Wir stellen daher fest, dass wir die unabhängigen Releasezyklen gar nicht benötigen. Wir können genau so gut getrennt entwickeln und gemeinsam bauen und deployen.
 Zu diesem Zeitpunkt ist die Laufzeit der Buildpipeline kein Problem.
 Was haben daher alle Fachmodule (die jeweils ein Multi-Module Maven Projekt waren) noch einmal unter einem gemeinsamen Oberprojekt zusammen zu fassen.
@@ -145,7 +145,7 @@ Die Ausgangssituation stellt sich zu diesem Zeitpunkt wie folgt dar: Wir betreib
 Allerdings: Keiner lässt lokal alle Tests durchlaufen, das dauert viel zu lange. So viele Kaffeepausen kann man gar nicht machen.
 Und das hat zur Folge:
 
-* Unser Trunk Build ist meistens Routing
+* Unser Trunk Build kennt meistens nur die Farbe Rot
 * Meistens schlagen die E2E Tests fehl (deren Ausführung dauert auch am längsten)
 * Fehlschläge haben wir in allen Teams
 * Umbauten in der GUI, aber auch im Backend sorgen dafür, dass zum Teil mehrere Tage der Build fehlschlägt
@@ -164,14 +164,17 @@ Dies ist ein guter Zeitpunkt uns nochmal alle Anforderungen anzuschauen, die wir
 
 ## Pre-Tested Commit Workflow
 
-Die Lösung, für die wir uns entschieden haben und die vom Jenkins unterstützt wird, sind dann Pre-Tested-Commits.
+Die Lösung, für die wir uns entschieden haben und die vom Jenkins unterstützt wird, sind Pre-Tested-Commits.
 
 * Entwickler commiten nicht direkt auf den trunk
-* Sondern auf einem Branch (XXX/for/trunk)
+* Sondern auf einem Branch (XXX/for/trunk) (KAW: Wonach werden diese geschnitten? User? Story?)
 * CD System führt für jeden Commit eine Pipeline aus
 * Workflow: Rebase, Tests, Merge in Trunk
 
 ![Branches](/img/posts/2016-11-16/branches.png)
+Branches können je nach Bedarf angelegt werden. Was sich etabliert haben sind Story- und Teambranches.
+Der Teambranch übernimmt dann die Funktion des Masters für das Team. Allerdings ist nur das einzelnen Team davon betroffen, 
+wenn dieser nicht sauber baut.
 
 Auch wenn dies der Standard ist, erlauben wir weiterhin, dass jeder Entwickler auch direkt in den Trunk committet.
 Dies ist hilfreich, um schnell Änderungen an alle Teams / Branches zu verteilen oder um den Trunk schnell wieder "grün" zu bekommen,
@@ -189,15 +192,17 @@ Geskriptet, passiert dabei ein Rebase. Je nach Ergebnis gibt es dann verschieden
 * Rebase erfolgreich, es wurden Änderungen vom Master in den Branch gemerged: Pushe die Änderungen ans gitlab und starte nicht den Pre-Commit Flow
 * Rebase erfolgreich, es gab keine zu mergenden Änderungen: Starte den Pre-Commit-Flow mit der Commit-Id
 
-Der zweite schritt startet keine Pipeline, da durch den Push der Codeänderungen der Gitlab Webhook wieder triggerd und dann 2 Pipelines mit den gleichen Änderungen ausgelöst würden.
+Der zweite Schritt startet keine Pipeline, da durch den Push der Codeänderungen der Gitlab Webhook wieder triggerd und dann 2 Pipelines mit den gleichen Änderungen ausgelöst würden.
 ![Branches](/img/posts/2016-11-16/rebase.png)
 
 
 ## Pre-Flow
 Mittels eines Config Files, welches mit dem Source Code versioniert wird und den Namen des Branches trägt, können verschiedene Aspekte des Pre-Flows konfiguriert werden.
 Ein wichtiger Aspekt ist es die auszuführenden E2E Testsuiten zu konfigurieren.
-Man kann dafür sorgen, dass im Pre-Flow nur ein Teil der Testuiten läuft. Dies ermöglicht es Ressourcenbedarf, Feedbackzeiten und höheres Risiko (das der Trunk Build fehlschlägt)
+Man kann dafür sorgen, dass im Pre-Flow nur ein Teil der Testsuiten läuft. Dies ermöglicht es Ressourcenbedarf, Feedbackzeiten und höheres Risiko (das der Trunk Build fehlschlägt)
 gegeneinander abzuwägen. Im Trunk laufen aber immer alle Tests.
+Diese Konfigurationsdateien bleiben auch nach dem Merge bestehen und müssen manuell gelöscht werden. Man könnte natürlich auch das
+automatisieren, allerdings sahen wir bisher dafür keinen Bedarf.
 
 Generell gilt: Der Trunk-Build darf rot werten (selten), aber er sollte es nicht regelmäßig sein. Rot ist eine Farbe, die dem Trunk nicht gut steht, dem Pre-Flow aber durchaus.
 
