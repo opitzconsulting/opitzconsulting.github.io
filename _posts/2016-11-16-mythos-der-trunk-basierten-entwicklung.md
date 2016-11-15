@@ -106,7 +106,7 @@ einmal das Prinzip der Trunk basierten Entwicklung hinterfragen. Was stimmt also
 Nachdem wir gerade so über diesen Prozess hergezogen sind, überrascht vielleicht die Erkenntnis: An der _Idee_ der Trunk-basierten Entwicklung ist nichts falsch.
 Jetzt kommt aber das dicke ABER: Wir glauben, dass die meisten Entwickler, Coaches, Berater nicht verstehen, was damit gemeint ist.
 
-Paul Hammant befasst sich in seinem Blog in mehreren Posts mit der Trunk basierten Entwicklung (TBD). Er tätigt in einem seiner wesentlichen Artikel folgende Aussagen:
+Paul Hammant befasst sich in seinem Blog in [mehreren Posts](http://paulhammant.com/2013/04/05/what-is-trunk-based-development/) mit der Trunk basierten Entwicklung (TBD). Er tätigt in einem seiner wesentlichen Artikel folgende Aussagen:
 
 * […] TBD is where all developers […] commit to one shared branch under source-control. 
 * Developers do not break the build with any commit.
@@ -125,7 +125,7 @@ Paul Hammant sagt also erst mal auch nur, dass es einen Dreiklang aus
 Geben soll. Ok, auch nichts neues, deckt sich mit den Aussagen oben, oder? Vielleicht sollte man hier nicht aufhören zu denken, sondern fragen: Was schreibt er _nicht_ im Blog?
 Er schreibt nämlich nicht, dass dies auf dem eigenen Rechner erfolgen muss. Er sagt, bevor man in den Trunk commitet, soll gezeigt werden, dass der Code "gut" ist.
 
-Paul Hammant beschreibt auch nochmal Googles Workflow:
+Paul Hammant beschreibt auch nochmal [Googles Workflow](http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/):
 
 * One single repo
 * Mondrian / Gerrit
@@ -173,7 +173,7 @@ Die Lösung, für die wir uns entschieden haben und die vom Jenkins unterstützt
 
 ![Branches](/img/posts/2016-11-16/branches.png)
 Branches können je nach Bedarf angelegt werden. Was sich etabliert haben sind Story- und Teambranches.
-Der Teambranch übernimmt dann die Funktion des Masters für das Team. Allerdings ist nur das einzelnen Team davon betroffen, 
+Der Teambranch übernimmt dann die Funktion des Masters für das Team. Allerdings ist nur das einzelnen Team davon betroffen,
 wenn dieser nicht sauber baut.
 
 Auch wenn dies der Standard ist, erlauben wir weiterhin, dass jeder Entwickler auch direkt in den Trunk committet.
@@ -228,3 +228,9 @@ Unsere Erfahrungen mit den Pre-Tested Commits kurz zusammengefasst
 * Cloudansatz für Infrastruktur wäre sinnvoll. Entwicklung in Sprints führt dazu, dass vor Sprintende mehr gepushed wird.
 
 Und die wichtigste Erkenntnis: Kenne deine Anforderungen und entscheide dann über den Workflow.
+
+## Referenzen
+
+1. [Advanced Continuous Integration](http://de.slideshare.net/opitzconsulting/dont-break-the-build-20), gearconf 2013
+2. [Advanced Continuous Integration in der Praxis](http://www.sigs-datacom.de/uploads/tx_mwjournals/pdf/attermeyer_JS_05_14_PD1I.pdf), Javaspektrum, 5/2014
+3. [Zeig mir deinen Code](https://jaxenter.de/zeig-mir-deinen-code-396), Jaxenter, Oktober 2014
