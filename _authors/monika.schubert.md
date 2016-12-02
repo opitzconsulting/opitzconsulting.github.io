@@ -1,10 +1,10 @@
 ---
 title: Monika Schubert
-username: mo_schubert
+username: monika.schubert
 email: monika.schubert@opitz-consulting.com
 social:
   twitter: mschubert
-  github: mo_schubert
+  github: mo-schubert
 topics:
   - Agilität
   - Anforderungsmanagement
