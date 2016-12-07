@@ -12,4 +12,4 @@ topics:
   - Projektmanagement
 ---
 
-Dr. Monika Schubert ist für die IT-Beratung OPITZ CONSULTING tätig. Neben ihrer Projekttätigkeit treibt sie als Leiterin des Kompetenzteams Anforderungs und Testmanagement aktiv die Recherche, die Weiterentwicklung und den Wissenstransfer neuer Konzepte voran.
+Dr. Monika Schubert ist für die IT-Beratung OPITZ CONSULTING tätig. Neben ihrer Projekttätigkeit treibt sie als Leiterin des Kompetenzteams Anforderungs- und Testmanagement aktiv die Recherche, die Weiterentwicklung und den Wissenstransfer neuer Konzepte voran.
