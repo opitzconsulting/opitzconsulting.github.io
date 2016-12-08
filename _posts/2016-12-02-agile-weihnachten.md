@@ -1,5 +1,5 @@
 ---
-title:  "Das Minimal Viable Present als Weihnachtsglück"
+title:  "Das Minimum Viable Present als Weihnachtsglück"
 categories: agilitaet
 author: monika.schubert
 ---
@@ -8,9 +8,9 @@ Der Weihnachtsmann tummelt sich wieder in den Schaufenstern, das große Fest rü
 
 ![Die Wollsocke aus dem letzten Jahr](/img/posts/2016-12-02/socke.png)
 
-In diesem Jahr wird mir das nicht passieren, denn ich werde die MVP-Methode verwenden. Was ist MVP? MVP, das heißt Minimal Viable Present und ist ein Geschenk, welches meinen Freund glücklich macht, ich aber mit möglichst geringen Aufwand beschaffen kann. Ich erstelle ein mögliches MVP und klopfe es gegen die Bedürfnisse meines Liebsten ab. Habe ich ein passendes MVP gefunden, kann ich es erweitern oder skalieren.
+In diesem Jahr wird mir das nicht passieren, denn ich werde die MVP-Methode verwenden. Was ist MVP? MVP, das heißt Minimum Viable Present und ist ein Geschenk, welches meinen Freund glücklich macht, ich aber mit möglichst geringen Aufwand beschaffen kann. Ich erstelle ein mögliches MVP und klopfe es gegen die Bedürfnisse meines Liebsten ab. Habe ich ein passendes MVP gefunden, kann ich es erweitern oder skalieren.
 
-# Entwicklung eines Minimal Viable Present (MVP)
+# Entwicklung eines Minimum Viable Present (MVP)
 
 Für die Entwicklung eines MVP überlege ich mir, welches Geschenk meinem Partner gefallen würde. Dazu bedarf es regelmäßiger Gespräche mit ihm. Wichtig ist mir dabei zu erfahren, was ihn bewegt und welche Bedürfnisse er hat. So komme ich zu einer oder mehreren plausiblen Geschenkideen, die ich in weiteren Gesprächen durch gezielte Fragen bestätige oder widerlege. 
 
