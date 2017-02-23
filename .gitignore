@@ -5,3 +5,6 @@ _site
 
 # OS X
 .DS_Store
+
+# IntelliJ
+/.idea/
