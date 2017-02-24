@@ -1,6 +1,6 @@
 ---
 title: Halil Hancioglu
-username: halil.hanciolgu
+username: halil.hancioglu
 email: halil.hanciolgu@opitz-consulting.com
 picture: halil.hancioglu.jpg
 social:
