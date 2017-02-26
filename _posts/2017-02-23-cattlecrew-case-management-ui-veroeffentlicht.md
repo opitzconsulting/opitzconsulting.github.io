@@ -54,7 +54,7 @@ wurde, welches eine DMN-Tabelle referenziert.
 
 ![Decision History](/img/posts/2017-02-23/cccmui-caseDetailsDecisionHistory.PNG)
 
-Der vierte Tab-Reiter zeigt die ermittelten Daten an und speziell hilfreich für den Entwickler.
+Der vierte Tab-Reiter zeigt die ermittelten Daten an und ist speziell hilfreich für den Entwickler.
 
 ![Raw Data](/img/posts/2017-02-23/cccmui-caseDetailsRawData.PNG)
 
@@ -62,15 +62,15 @@ Durch Auswahl des „New Case“ Buttons in der Hauptnavigation kann ein neuer C
 
 ![New Case](/img/posts/2017-02-23/cccmui-newCase.png)
 
-Es werden alle in der Engine existierenden Cases aufgelistet. Nach der Auswahl eines Cases können 
-ein fachlicher Schlüssel und Prozessvariablen hinzugefügt werden.
+Es werden alle in der Engine existierenden Case Definitionen auf der linken Seite aufgelistet. 
+Nach der Auswahl einer Case Definition können Prozessvariablen und ein fachlicher Schlüssel zum Case vor dem Start hinzugefügt werden.
 
 ![New Case With Data](/img/posts/2017-02-23/cccmui-newCaseWithVariable.png)
 
 Sobald ein Case gestartet wurde, wird man zur Übersichtsseite geleitet. Hier ist dann auch der gestartete 
 Case sichtbar.
 
-## Used process engine
+## Eingesetzte Process Engine
 Das veröffentlichte Projekt setzt die Camunda BPM Process Engine voraus. Camunda BPM ist einer 
 der ersten Softwarehersteller die CMMN 1.1 in Ihre Process Engine integriert hat und auch einen 
 entsprechenden Modeler zur Verfügung stellt. Seit Camunda 7.6 ist auch das Feature „CMMN Monitoring“ 
