@@ -1,6 +1,8 @@
 ---
-title: "Kein Applaus für Scheiße"
-categories: agilitaet
+title: Kein Applaus für Scheiße
+date: 2016-08-18 00:00:00 Z
+categories:
+- agilitaet
 author: nina.nuernberger
 ---
 
