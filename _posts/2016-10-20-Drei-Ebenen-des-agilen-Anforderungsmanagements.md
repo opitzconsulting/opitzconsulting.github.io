@@ -1,8 +1,11 @@
 ---
-title: "Die 3 Ebenen des agilen Anforderungsmanagements"
-categories: agilitaet
+title: Die 3 Ebenen des agilen Anforderungsmanagements
+date: 2016-10-20 00:00:00 Z
+categories:
+- agilitaet
 author: daniel.strauch
 ---
+
 Wie können Anforderungen zergliedert, gemanaged und priorisiert werden? Das ist eine wichtige Frage, besonders wenn man in einem Projekt mit klassischen Ansätzen ein Vorgehen nach agilen Maßstäben etablieren will. Als Scrum Master werde ich Coach des Product Owners.
 
 Das Arbeiten mit agilen Ansätzen unterscheidet sich doch sehr vom klassichen / wasserfallgetrieben Vorgehen mit "vollständig ausformulierten" Spezifikationen. An diesem Punkt anzusetzen, war das Wichtigste, denn eine zentrale Frage war, was der Product Owner mit seinem schon vor langem erstellten Lastenheft tun soll.

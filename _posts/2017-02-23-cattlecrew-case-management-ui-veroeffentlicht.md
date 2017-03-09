@@ -1,14 +1,16 @@
 ---
-title: "CattleCrew Case Management UI veröffentlicht"
-author:
-  - halil.hancioglu
+title: CattleCrew Case Management UI veröffentlicht
+date: 2017-02-23 00:00:00 Z
 categories:
-  - BPM
+- BPM
 tags:
-  - Case Mangement
-  - CMMN
-  - Camunda BPM
+- Case Mangement
+- CMMN
+- Camunda BPM
+author:
+- halil.hancioglu
 ---
+
 Resultierend aus unserer bisherigen Case Management Erfahrung haben wir vor einiger Zeit eine 
 selbst entwickelte Case Management UI auf GitHub veröffentlicht, um einen besseren Einstieg in 
 Case Management und CMMN 1.1 zu ermöglichen. 
