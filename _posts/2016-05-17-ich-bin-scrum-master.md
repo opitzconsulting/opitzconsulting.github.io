@@ -1,8 +1,6 @@
 ---
 title: Ich bin Scrum Master
-date: 2016-05-17 00:00:00 Z
-categories:
-- agilitaet
+categories: agilitaet
 author: nina.nuernberger
 ---
 

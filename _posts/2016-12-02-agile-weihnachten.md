@@ -1,8 +1,6 @@
 ---
-title: Das Minimum Viable Present als Weihnachtsglück
-date: 2016-12-02 00:00:00 Z
-categories:
-- agilitaet
+title:  "Das Minimum Viable Present als Weihnachtsglück"
+categories: agilitaet
 author: monika.schubert
 ---
 

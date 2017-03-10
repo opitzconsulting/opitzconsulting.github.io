@@ -1,8 +1,6 @@
 ---
-title: Agile Retreat v3
-date: 2014-11-17 00:00:00 Z
-categories:
-- agilitaet
+title:  "Agile Retreat v3"
+categories: agilitaet
 author: stefan.glase
 ---
 

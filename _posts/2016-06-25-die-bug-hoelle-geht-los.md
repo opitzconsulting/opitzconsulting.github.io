@@ -1,8 +1,6 @@
 ---
-title: Die Bug-Hölle geht los - pünktlich zum GoLive
-date: 2016-06-25 00:00:00 Z
-categories:
-- agilitaet
+title: "Die Bug-Hölle geht los - pünktlich zum GoLive"
+categories: agilitaet
 author: daniel.strauch
 ---
 

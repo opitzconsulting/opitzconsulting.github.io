@@ -1,8 +1,6 @@
 ---
-title: Sprint Planning einmal anders
-date: 2016-06-10 00:00:00 Z
-categories:
-- agilitaet
+title: "Sprint Planning einmal anders"
+categories: agilitaet
 author: heiko.paoli
 ---
 
