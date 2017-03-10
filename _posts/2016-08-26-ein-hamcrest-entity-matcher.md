@@ -1,9 +1,10 @@
 ---
-title: "Ein Hamcrest Entity Matcher"
-categories: software_craftsmanship
+title: Ein Hamcrest Entity Matcher
+date: 2016-08-26 00:00:00 Z
+categories:
+- software_craftsmanship
 author: stefan.lack
 ---
-
 
 Der hier vorgestellte Hamcrest Matcher entstand im Rahmen eines Projektes, in dem sehr viele Java Entity Objekte auf Korrektheit ihrer Properties getestet werden mussten.
 Mit dem Matcher können mittels eines einzelnen Assert-Statement alle Properties einer Klasse auf Korrektheit geprüft werden. Dabei werden alle fehlgeschlagenen Validierungen am Ende der Prüfung in einer übersichtlichen Fehlermeldung dargestellt.

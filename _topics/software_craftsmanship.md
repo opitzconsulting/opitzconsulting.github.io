@@ -1,6 +1,7 @@
 ---
 title: Software Craftsmanship
-category: software_craftsmanship
+categories:
+- software_craftsmanship
 ---
 
 Wir berichten von unseren Erfahrungen mit dem Thema Software Craftsmanship.

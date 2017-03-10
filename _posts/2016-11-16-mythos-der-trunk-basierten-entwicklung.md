@@ -1,16 +1,18 @@
 ---
-title: "Mythos der Trunk-basierten Entwicklung (Vortragstext)"
-author:
-  - richard.attermeyer
-  - jens.kanschik
+title: Mythos der Trunk-basierten Entwicklung (Vortragstext)
+date: 2016-11-16 00:00:00 Z
 categories:
-  - Continuous Delivery
+- Continuous Delivery
 tags:
-  - Continuous Delivery
-  - Konfigurationsmanagement
-  - Softwareentwicklung
-  - git
+- Continuous Delivery
+- Konfigurationsmanagement
+- Softwareentwicklung
+- git
+author:
+- richard.attermeyer
+- jens.kanschik
 ---
+
 Dieser Blogartikel ist als Begleitmaterial zum gleichnamigen [Vortrag](http://de.slideshare.net/opitzconsulting)
 auf der [Continuous Lifecycle 2016](http://www.continuouslifecycle.de/veranstaltung-5382-der-mythos-der-trunk-basierten-entwicklung-%5Bsponsored-talk%5D.html?id=5382) gedacht.
 
