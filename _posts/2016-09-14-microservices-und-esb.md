@@ -1,14 +1,16 @@
 ---
-title: "Microservices Architektur und ESB: Unvereinbar?"
-author: richard.attermeyer
+title: 'Microservices Architektur und ESB: Unvereinbar?'
+date: 2016-09-14 00:00:00 Z
 categories:
-  - architektur
+- architektur
 tags:
-  - Microservices
-  - Flexible Architekturen
-  - SOA
-  - Integration
+- Microservices
+- Flexible Architekturen
+- SOA
+- Integration
+author: richard.attermeyer
 ---
+
 "Passt ein Enterprise Service Bus in eine Microservices Architektur", das fragen sich viele, die bisher auf eine Service-orientierte Architektur gesetzt haben.
 
 ## Der Enterprise Service Bus

@@ -1,9 +1,11 @@
 ---
-title:  "Continuous Delivery von Datenbankänderungen"
+title: Continuous Delivery von Datenbankänderungen
+date: 2016-08-31 00:00:00 Z
 categories:
-  - "continuous delivery"
+- continuous delivery
 author: richard.attermeyer
 ---
+
 Da rief mich doch gerade ein Kollege an und fragte, wie das denn geht mit Continuous Delivery und Datenbankänderungen.
 
 Also ich kann nur berichten, wie wir das im aktuellen Projekt machen.
