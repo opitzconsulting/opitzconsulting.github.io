@@ -1,11 +1,8 @@
 ---
-title: 'Fit for Agile: Die Retrospektive'
-date: 2017-03-09 00:00:00 Z
-categories:
-- agilitaet
+title: "Fit for Agile: Die Retrospektive"
+categories: agilitaet
 author: nina.nuernberger
 ---
-
 Die Retrospektive gilt als das mächtigste und zugleich anspruchsvollste Werkzeug der Scrum Meetings. Aber auch in klassisch aufgestellten Projekten und Linieneinheiten kann sie den kontinuierlichen Verbesserungsprozess in der Zusammenarbeit und Vorgehensweise bereichern. Nur, wie macht man sowas?
 
 ![Fit for Agile](/img/posts/poster-retrospektive.jpg)   

@@ -1,52 +1,77 @@
----
-title: opitzconsulting blog
-timezone: UTC
-collections:
-  authors:
-    title: Authors
-    output: true
-    permalink: "/authors/:path/"
-  posts:
-    title: Posts
-    output: true
-  topics:
-    title: Topics
-    output: true
-    permalink: "/categories/:path/"
-  uploads:
-    title: Uploads
-    output: true
-defaults:
-- scope:
-    path: ''
-    type: topics
-  values:
-    layout: category
-- scope:
-    path: ''
-    type: authors
-  values:
-    layout: author
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-email: info@opitz-consulting.com
-description: 'Hier schreiben Mitarbeiter von OPITZ CONSULTING zu Technologien, Werkzeugen,
-  Methoden und anderen interessanten Erkenntnissen und Erlebnissen aus ihrem Arbeitsalltag
-  bei und für unsere Kunden.
+#              _ _                                   _ _   _
+#             (_) |                                 | | | (_)
+#   ___  _ __  _| |_ ____   ___ ___  _ __  ___ _   _| | |_ _ _ __   __ _
+#  / _ \| '_ \| | __|_  /  / __/ _ \| '_ \/ __| | | | | __| | '_ \ / _` |
+# | (_) | |_) | | |_ / /  | (_| (_) | | | \__ \ |_| | | |_| | | | | (_| |
+#  \___/| .__/|_|\__/___|  \___\___/|_| |_|___/\__,_|_|\__|_|_| |_|\__, |
+#       | |                                    _     _              __/ |
+#       |_|                                   | |   | |             |___/
+#                                             | |__ | | ___   __ _
+#                                             | '_ \| |/ _ \ / _` |
+#                                             | |_) | | (_) | (_| |
+#                                             |_.__/|_|\___/ \__, |
+#                                                             __/ |
+#                                                            |___/
 
-'
-baseurl: ''
-url: http://opitzconsulting.github.io
+# Metadata
+title: opitzconsulting blog
+email: info@opitz-consulting.com
+description: >
+  Hier schreiben Mitarbeiter von OPITZ CONSULTING zu Technologien, Werkzeugen,
+  Methoden und anderen interessanten Erkenntnissen und Erlebnissen aus ihrem
+  Arbeitsalltag bei und für unsere Kunden.
+
+# URL
+baseurl: ""
+url: "http://opitzconsulting.github.io"
+
+# Social Media Links
 twitter_username: OC_WIRE
 github_username: opitzconsulting
 youtube_username: OPITZCONSULTING
+
+# Google Analytics
 google_analytics_code: UA-86969716-1
+
+# Markdown
 markdown: kramdown
-permalink: "/:year/:month/:day/:title/"
+
+# Permanent Links
+permalink: /:year/:month/:day/:title/
+
+# Pagination
 paginate: 5
-gems:
-- jekyll-paginate
+gems: [jekyll-paginate]
 paginate_path: "/pages/:num/"
+
+# Collections
+collections:
+  authors:
+    output: true
+    permalink: /authors/:path/
+  topics:
+    output: true
+    permalink: /categories/:path/
+
+# Layout Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "category"
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Ascii Text generated with http://www.network-science.de/ascii (Font: big)

@@ -1,12 +1,11 @@
 ---
-title: Anzeige des Jenkins Buildstatus mit Hue-Lampen
-date: 2016-05-04 00:00:00 Z
-categories:
-- continuous delivery
-tags:
-- DevOps
-- Continuous Delivery
+title: "Anzeige des Jenkins Buildstatus mit Hue-Lampen"
 author: marco.buss
+categories:
+  - continuous delivery
+tags:
+  - DevOps
+  - Continuous Delivery
 ---
 
 In vielen Teams hat sich der Buildmonitor von Jenkins zur Überwachung der Buildjobs etabliert. Einfach einen Monitor an einer entsprechende Stelle aufstellen, Jenkins konfigurieren und schon hat der geneigte Entwickler alles im Blick.

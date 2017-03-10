@@ -1,7 +1,7 @@
 ---
-title: Über uns
-permalink: "/about/"
 layout: page
+title: Über uns
+permalink: /about/
 ---
 
 {{ site.description }}
