@@ -1,8 +1,6 @@
 ---
 title: XP Days Germany 2016
-date: 2016-11-22 00:00:00 Z
-categories:
-- agilitaet
+categories: agilitaet
 author: stefan.glase
 ---
 

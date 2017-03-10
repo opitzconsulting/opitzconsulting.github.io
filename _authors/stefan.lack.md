@@ -2,20 +2,20 @@
 title: Stefan Lack
 username: stefan.lack
 email: stefan.lack@opitz-consulting.com
-website: 
+website:
 picture: stefan.lack.jpg
 social:
-  twitter: 
+  twitter:
   github: stefanlack
-  stackoverflow: 
-  facebook: 
+  stackoverflow:
+  facebook:
   xing: Stefan_Lack
-  lanyrd: 
+  lanyrd:
 topics:
-- Software Craftsmanship
-- Testgetriebene Entwicklung
-- Webanwendungen mit Java OpenSource-Frameworks
-- Oracle PL/SQL Entwicklung
+  - Software Craftsmanship
+  - Testgetriebene Entwicklung
+  - Webanwendungen mit Java OpenSource-Frameworks
+  - Oracle PL/SQL Entwicklung
 ---
 
 Für unsere Kunden führt Stefan Lack als Entwickler und Consultant Software-Projekte durch. Dabei ist er in allen Projektphasen von der Aufnahme der Kundenanforderung, der Konzeption, der testgetriebenen Implementierung bis zur Auslieferung der Software beteiligt.
