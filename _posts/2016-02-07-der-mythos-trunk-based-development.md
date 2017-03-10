@@ -1,13 +1,14 @@
 ---
-title: "Der Mythos der trunk-basierten Entwicklung"
-author: richard.attermeyer
+title: Der Mythos der trunk-basierten Entwicklung
+date: 2016-02-07 00:00:00 Z
 categories:
-  - continuous delivery
+- continuous delivery
 tags:
-  - DevOps
-  - Continuous Delivery
-  - Configuration-Management
-  - Source Control
+- DevOps
+- Continuous Delivery
+- Configuration-Management
+- Source Control
+author: richard.attermeyer
 ---
 
 Langlebige Branches sind out - es lebe die trunk-basierte Entwicklung. So oder ähnlich lautet ein Mantra im Bereich Continuous Delivery.

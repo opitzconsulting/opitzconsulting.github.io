@@ -8,10 +8,11 @@ social:
   facebook: marco.buss.7
   xing: Marco_Buss2
 topics:
-  - Agilität
-  - Scrum
-  - Software Craftsmanship
-  - Spring
-  - JavaFX
-  - Continuous Delivery
+- Agilität
+- Scrum
+- Software Craftsmanship
+- Spring
+- JavaFX
+- Continuous Delivery
 ---
+
