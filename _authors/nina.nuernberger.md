@@ -2,6 +2,7 @@
 title: Nina Nürnberger
 username: nina.nuernberger
 email: nina.nuernberger@opitz-consulting.com
+picture: nina.nuernberger.jpg
 social:
   github: NinaNuernberger
   xing: Nina Nürnberger
