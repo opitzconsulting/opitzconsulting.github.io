@@ -4,7 +4,7 @@ author:
   - richard.attermeyer
   - jens.kanschik
 categories:
-  - Continuous Delivery
+  - "continuous delivery"
 tags:
   - Continuous Delivery
   - Konfigurationsmanagement
