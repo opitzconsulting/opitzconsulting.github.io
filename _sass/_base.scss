@@ -164,6 +164,17 @@ pre {
 }
 
 /**
+ * Announcement Banner
+ */
+.announcement {
+  margin: 0 -10px 1.5em;
+  padding: 10px;
+  border: 1px solid #cec;
+  border-radius: 5px;
+  background-color: #efe;
+}
+
+/**
  * Clearfix
  */
 %clearfix {
